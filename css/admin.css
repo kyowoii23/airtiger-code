@@ -1,0 +1,1179 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.pop_up {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ffb300;
+  background-color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -100px;
+  display: none;
+}
+
+.pop_up img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-left: 125px;
+}
+
+.pop_up div {
+  width: 300px;
+  height: 100px;
+  font-size: 13px;
+  text-align: center;
+  color: #333333;
+  background-color: #ffb300;
+  line-height: 100px;
+  float: left;
+  font-weight: bold;
+}
+
+.pop_up a {
+  width: 70px;
+  height: 30px;
+  float: left;
+  background-color: #ffb300;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  float: left;
+}
+
+.pop_up .x_box_ok {
+  width: 70px;
+  height: 30px;
+  float: left;
+  background-color: #ffb300;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 75px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  float: left;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.pop_up .x_box_no {
+  width: 70px;
+  height: 30px;
+  float: left;
+  background-color: #ffb300;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  float: left;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #13264e;
+}
+
+.pop_up_ok {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ffb300;
+  background-color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -100px;
+}
+
+.pop_up_ok img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-left: 125px;
+}
+
+.pop_up_ok div {
+  width: 300px;
+  height: 100px;
+  font-size: 13px;
+  text-align: center;
+  color: #333333;
+  background-color: #ffb300;
+  line-height: 100px;
+  float: left;
+  font-weight: bold;
+}
+
+.pop_up_ok a {
+  width: 70px;
+  height: 30px;
+  float: left;
+  background-color: #ffb300;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  float: left;
+}
+
+.pop_up_ok .x_box_pop_up_ok {
+  width: 70px;
+  height: 30px;
+  float: left;
+  background-color: #ffb300;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 115px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  float: left;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cap_box {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ffb300;
+  background-color: white;
+  text-align: center;
+  position: absolute;
+  left: 60%;
+  top: 400px;
+  margin-left: -150px;
+  display: none;
+}
+
+.cap_box img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-left: 125px;
+  cursor: pointer;
+}
+
+.cap_box .cap_pic, .cap_box div {
+  width: 300px;
+  height: 50px;
+  background-color: #ffb300;
+  float: left;
+}
+
+.cap_box div {
+  float: left;
+}
+
+.cap_box div .check_num {
+  width: 150px;
+  height: 40px;
+  margin: 5px 0px;
+  border: none;
+  outline: none;
+  text-align: center;
+  float: left;
+  margin-left: 55px;
+}
+
+.cap_box div .re_box {
+  width: 40px;
+  height: 40px;
+  float: left;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+  margin: 5px;
+  background-color: orangered;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cap_box p {
+  width: 300px;
+  height: 10px;
+  font-size: 6px;
+  color: red;
+  float: left;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+.cap_box #del_box {
+  width: 70px;
+  height: 30px;
+  background-color: #ffb300;
+  float: left;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-top: 3px;
+  margin-left: 115px;
+  color: #333333;
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  background-color: white;
+}
+
+header .admin_page {
+  width: 1200px;
+  height: 100px;
+  margin: auto;
+}
+
+header .admin_page .main_logo, header .admin_page .main_menu, header .admin_page .main_logout {
+  width: 240px;
+  height: 100px;
+  float: left;
+  cursor: pointer;
+}
+
+header .admin_page .main_logo .main_logo_box, header .admin_page .main_menu .main_logo_box, header .admin_page .main_logout .main_logo_box, header .admin_page .main_logo .main_logo_box .main_logo_img, header .admin_page .main_menu .main_logo_box .main_logo_img, header .admin_page .main_logout .main_logo_box .main_logo_img {
+  width: 200px;
+  height: 100px;
+  cursor: pointer;
+}
+
+header .admin_page .main_menu {
+  width: 70%;
+}
+
+header .admin_page .main_menu .main_menu_box {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header .admin_page .main_menu .main_menu_box .menu1, header .admin_page .main_menu .main_menu_box .menu2, header .admin_page .main_menu .main_menu_box .menu3 {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  font-size: 17px;
+  margin-top: 35px;
+  line-height: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+header .admin_page .main_logout {
+  width: 10%;
+}
+
+header .admin_page .main_logout .logout_btn {
+  width: 120px;
+  height: 50px;
+  color: #757575;
+  float: right;
+  line-height: 50px;
+  text-align: center;
+  font-size: 13px;
+  outline: none;
+}
+
+section {
+  width: 1200px;
+  height: 780px;
+  margin: 0 auto;
+}
+
+section .null_box {
+  width: 100%;
+  height: 100px;
+  float: left;
+}
+
+section .ad_text {
+  width: 300px;
+  height: 70px;
+  margin-left: 130px;
+  line-height: 70px;
+  float: left;
+}
+
+section .tabBox1 {
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 525px;
+  float: left;
+}
+
+section .tabBox1 .tab_menu {
+  width: 150px;
+  height: 30px;
+  font-size: 20px;
+  color: #333333;
+  float: left;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 0px;
+  line-height: 30px;
+}
+
+section .tabBox1 .yellowBar {
+  width: 140px;
+  height: 5px;
+  background-color: #ffb300;
+  float: left;
+  visibility: visible;
+  margin-left: 4px;
+}
+
+section .tabBox2 {
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+  float: left;
+}
+
+section .tabBox2 .tab_menu2 {
+  width: 150px;
+  height: 30px;
+  font-size: 15px;
+  color: #333333;
+  float: left;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 0px;
+  line-height: 30px;
+}
+
+section .tabBox2 .yellowBar2 {
+  width: 140px;
+  height: 5px;
+  background-color: #ffb300;
+  visibility: hidden;
+  margin: auto;
+  float: left;
+  margin-left: 4px;
+}
+
+section .ad_serarchbox_ksg {
+  width: 670px;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  float: left;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+}
+
+section .ad_serarchbox_ksg .ad_search_ksg {
+  width: 40%;
+  height: 30px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  float: left;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+}
+
+section .ad_serarchbox_ksg .ad_id_search_button_ksg {
+  width: 15%;
+  height: 30px;
+  background-color: #ffb300;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  cursor: pointer;
+  line-height: 28px;
+  outline: none;
+  width: 10%;
+  margin-left: 5px;
+  margin-top: 0px;
+}
+
+section .ad_form_ksg {
+  width: 550px;
+  height: 370px;
+  margin-top: 20px;
+  margin-left: 325px;
+  float: left;
+}
+
+section .ad_form_ksg .ad_id_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+section .ad_form_ksg .ad_alert {
+  width: 200px;
+  height: 10px;
+  font-size: 10px;
+  color: red;
+  margin-left: 200px;
+  margin-top: 2px;
+  line-height: 10px;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+section .ad_form_ksg .ad_id_ksg {
+  width: 200px;
+  height: 30px;
+  margin-top: 13px;
+  margin-left: 10px;
+  margin-right: 140px;
+  background-color: white;
+  line-height: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+section .ad_form_ksg .ad_pw_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  width: 90px;
+  margin-left: 90px;
+}
+
+section .ad_form_ksg .ad_pw_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+}
+
+section .ad_form_ksg .ad_replay_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  width: 140px;
+  margin-left: 40px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_replay_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_confirm_ksg {
+  width: 15%;
+  height: 30px;
+  background-color: #ffb300;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  cursor: pointer;
+  line-height: 28px;
+  outline: none;
+  width: 10%;
+  margin-left: 5px;
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_name_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_name_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  width: 100px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_nameen_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  width: 60px;
+  margin-left: 120px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_nameen_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  margin-right: 0%;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_sex_ksg {
+  width: 15%;
+  height: 30px;
+  background-color: #ffb300;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  cursor: pointer;
+  line-height: 28px;
+  outline: none;
+  background-color: white;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_man_button_ksg {
+  width: 15%;
+  height: 30px;
+  background-color: #ffb300;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  cursor: pointer;
+  line-height: 28px;
+  outline: none;
+  width: 6%;
+  background-color: lightgrey;
+  margin-top: 2px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_woman_button_ksg {
+  width: 15%;
+  height: 30px;
+  background-color: #ffb300;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  cursor: pointer;
+  line-height: 28px;
+  outline: none;
+  width: 6%;
+  background-color: lightgrey;
+  margin-top: 2px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_birth_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  width: 50px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_birth_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_from_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_from_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_phone_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_phone_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_email_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_email_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_address_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_address_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_ksg .ad_button_ksg {
+  width: 30%;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 2%;
+  margin-left: 20%;
+  margin-bottom: 10%;
+  background-color: #ffb300;
+  cursor: pointer;
+  font-size: 13px;
+  float: left;
+}
+
+section .ad_form_ksg .ad_cancle_ksg {
+  width: 30%;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #13264e;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px;
+  font-size: 13px;
+  float: left;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+section .ad_form_kkw {
+  width: 550px;
+  height: 110px;
+  margin-top: 20px;
+  margin-left: 325px;
+  float: left;
+}
+
+section .ad_form_kkw .ad_id_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+section .ad_form_kkw .ad_alert {
+  width: 200px;
+  height: 10px;
+  font-size: 10px;
+  color: red;
+  margin-left: 200px;
+  margin-top: 2px;
+  line-height: 10px;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+section .ad_form_kkw .ad_id_ksg {
+  width: 200px;
+  height: 30px;
+  margin-top: 13px;
+  margin-left: 10px;
+  margin-right: 140px;
+  background-color: white;
+  line-height: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+section .ad_form_kkw .ad_pw_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  width: 90px;
+  margin-left: 90px;
+}
+
+section .ad_form_kkw .ad_pw_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+}
+
+section .ad_form_kkw .ad_replay_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  width: 140px;
+  margin-left: 40px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_kkw .ad_replay_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+
+section .ad_form_kkw .ad_confirm_ksg {
+  width: 15%;
+  height: 30px;
+  background-color: #ffb300;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  cursor: pointer;
+  line-height: 28px;
+  outline: none;
+  width: 10%;
+  margin-left: 5px;
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+
+section .main4_selectbox_kkw {
+  width: 1200px;
+  height: 520px;
+  float: left;
+  margin-top: 20px;
+  display: none;
+}
+
+section .main4_selectbox_kkw .wrap {
+  width: 1000px;
+  margin: auto;
+}
+
+section .main4_selectbox_kkw .wrap .find {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+}
+
+section .main4_selectbox_kkw .wrap .find h2 {
+  margin-left: 30px;
+}
+
+section .main4_selectbox_kkw .wrap .reserve_number {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  font-size: 13px;
+  background-color: #c9c9c9;
+}
+
+section .main4_selectbox_kkw .wrap .reserve_number p {
+  margin-left: 10px;
+  float: left;
+}
+
+section .main4_selectbox_kkw .wrap .main3_selectprice_kkw {
+  width: 1000px;
+  height: 30px;
+  margin: 0px auto;
+}
+
+section .main4_selectbox_kkw .wrap .main3_selectprice_kkw div {
+  width: 166.66px;
+  height: 30px;
+  background-color: #f7f7f7;
+  float: left;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333333;
+  line-height: 30px;
+}
+
+section .main4_selectbox_kkw .wrap .main3_selectprice2_kkw {
+  width: 1000px;
+  height: 100px;
+  margin: auto;
+}
+
+section .main4_selectbox_kkw .wrap .main3_selectprice2_kkw div {
+  width: 166.66px;
+  height: 100px;
+  background-color: white;
+  float: left;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333333;
+  line-height: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section .main4_selectbox_kkw .wrap .main3_selectprice2_kkw div:nth-child(1) {
+  font-size: 20px;
+}
+
+section .main4_selectbox_kkw .wrap .main3_selectprice2_kkw div:nth-child(1) img {
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
+}
+
+section .main4_selectbox_kkw .wrap .main3_selectprice2_kkw div:nth-child(2) {
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+section .main4_selectbox_kkw .wrap .main3_selectprice2_kkw div:nth-child(2)::after {
+  content: "(ICN)";
+  font-size: 13px;
+}
+
+section .main4_selectbox_kkw .wrap .main3_selectprice2_kkw div:nth-child(3) {
+  line-height: 100px;
+  font-size: 15px;
+  color: #757575;
+  font-weight: normal;
+}
+
+section .main4_selectbox_kkw .wrap .main3_selectprice2_kkw div:nth-child(4) {
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+section .main4_selectbox_kkw .wrap .main3_selectprice2_kkw div:nth-child(4)::after {
+  content: "(NRT)";
+  font-size: 13px;
+}
+
+section .main4_selectbox_kkw .wrap .main3_selectprice2_kkw div:nth-child(5) {
+  font-size: 20px;
+  padding-top: 15px;
+}
+
+section .main4_selectbox_kkw .wrap .main3_selectprice2_kkw div:nth-child(5) p {
+  font-size: 13px;
+  color: orangered;
+}
+
+section .main4_selectbox_kkw .wrap .main3_selectprice2_kkw div:nth-child(5)::before {
+  content: "KRW";
+  font-size: 13px;
+  color: #757575;
+  font-weight: normal;
+}
+
+section .main4_selectbox_kkw .wrap .main3_selectprice2_kkw .admin_delete_bt {
+  margin-top: 40px;
+  margin-left: 20px;
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+}
+
+section .main4_selectbox_kkw .wrap .passengers {
+  width: 1000px;
+  height: 150px;
+  float: left;
+}
+
+section .main4_selectbox_kkw .wrap .passengers div {
+  float: right;
+  margin-right: 210px;
+  margin-top: 10px;
+}
+
+section .main4_selectbox_kkw .wrap .passengers div h4 {
+  float: left;
+  margin-left: 380px;
+  color: #ffb300;
+}
+
+section .main4_selectbox_kkw .wrap .passengers div span {
+  font-size: 13px;
+  margin-left: 15px;
+}
+
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: #ffb300;
+  float: left;
+  clear: both;
+}
+
+footer .footer_info {
+  width: 1200px;
+  height: 150px;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 20px;
+  padding-top: 40px;
+}
+
+footer .footer_info h3 {
+  width: 1000px;
+  height: 30px;
+  font-size: 13px;
+}
+
+footer .footer_info p {
+  width: 1000px;
+  height: 50px;
+  font-size: 11px;
+}
+
+footer .footer_info p a {
+  width: 50px;
+  height: 13px;
+  font-size: 11px;
+  color: white;
+  background-color: orangered;
+}
+/*# sourceMappingURL=admin.css.map */

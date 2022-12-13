@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jq.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/mypage.css">
+    <title>비행기 티켓팅 사이트</title>
+</head>
+<body>
+        <header>
+            <!--header logo-->
+            <div class="main_logo">
+                <div class="main_logo_box">
+                    <img class="main_logo_img" src="../img/main_logo.png" alt="main_logo">
+                </div>
+            </div>
+            <!--header menu-->
+            <div class="main_menu">
+                <ul class="main_menu_box">
+                    <li class="menu1">예약하기</li>
+                    <li class="menu2">예약 조회</li>
+                    <li class="menu3">마이 페이지</li>
+                </ul>
+            </div>
+            <!--header logout-->
+            <div class="main_logout">
+                <a class="logout_btn" href="#">로그아웃</a>
+            </div>
+        </header>
+    <section>
+        <h2 class="ad_text">마이 페이지</h2>
+        <div class="tabBox1" minwidth="150px">
+            <h2 class="tab_menu">회원 정보 수정</h2>
+            <div class="yellowBar"></div>
+        </div>
+        <form class="my_form_ksg" action="#" minwidth="550px" method="post">
+                    <p class="my_id_txt_ksg">아이디</p>
+                    <div type="text" id="my_id_ksg" class="my_id_ksg">mmm4mmm</div>
+                    <p class="my_pw_txt_ksg">비밀번호</p>
+                    <!-- <input type="password" placeholder=" 비밀번호" class="my_pw_ksg" name="pw">
+                    <p class="my_replay_txt_ksg">비밀번호 재확인</p>
+                    <input type="password" placeholder=" 비밀번호 확인" class="my_replay_ksg" name="replay"> -->
+                    <input type="button" value="변경" class="my_pw_button_ksg"></button>
+                    <!-- <p class="my_alert my_pw_alert">* 비밀번호를 확인해주세요.</p>   -->
+                    <p class="my_name_txt_ksg">이름</p>
+                    <div class="my_name_ksg"> 김하늘 </div>
+                    <div class="my_sex_ksg"> 여자 </div>
+                    <p class="my_birth_txt_ksg">생년월일</p>
+                    <input type="date" class="my_birth_ksg" name="birth">
+                    <p class="my_alert my_birth_alert">* 생년월일을 입력해주세요.</p> 
+                    <p class="my_from_txt_ksg">국적</p>
+                    <input type="text" placeholder=" 국적" class="my_from_ksg" name="from">
+                    <p class="my_alert my_from_alert">* 영문으로 국적을 입력해주세요.</p> 
+                    <p class="my_phone_txt_ksg">연락처</p>
+                    <input type="text" placeholder=" 연락처" class="my_phone_ksg" name="phone">
+                    <p class="my_alert my_phone_alert">* 연락처를 확인해주세요.</p> 
+                    <p class="my_email_txt_ksg">이메일</p>
+                    <input type="email" placeholder=" 이메일" class="my_email_ksg" name="email">
+                    <p class="my_alert my_email_alert">* 이메일 주소를 확인해주세요.</p> 
+                    <p class="my_address_txt_ksg">주소</p>
+                    <input type="address" placeholder=" 주소" class="my_address_ksg" name="address">
+                    <p class="my_alert my_address_alert">* 주소를 확인해주세요.</p>
+                    <input type="button" value="수정" class="my_button_ksg"></input>
+                    <button class="my_cancle_ksg"><a href="#">취소</a></button>
+        </form>
+        <div class="pop_up">
+            <img src="../img/small_logo.png" alt="small">
+            <div>
+                <p class="my_pop_up_pw_txt">현재 비밀번호</p>
+                <input type="password" placeholder=" 현재 비밀번호" class="my_pop_up_pw" name="pw">
+                <p class="my_pop_up_new_txt">비밀번호</p>
+                <input type="password" placeholder=" 비밀번호" class="my_pop_up_new" name="pw">
+                <p class="my_pop_up_new_replay_txt">비밀번호 재확인</p>
+                <input type="password" placeholder=" 비밀번호 확인" class="my_pop_up_new_replay" name="replay">
+            </div>
+            <input type="submit" class="my_pop_up_btn" value="확인">
+            <a href="#">닫기</a>
+        </div>
+    </section>
+        <footer>
+            <!--footer info-->
+            <div class="footer_info">
+                <h3>(주) 에어타이거</h3>
+                <p>대표 : 김하늘 외 3명 | 주소 : 서울특별시 강서구 하늘길 260 | 전화 : 1234-5678 / 02-1234-5678<br>
+                    사업자등록번호 : 100-12-09134 | 통신판매업신고 : 강서 제 21-0507 | 개인정보보호책임자 : 여객사업본부장 김장연 대표<br>
+                    &copy; AIR TIGER
+                </p>
+            </div>
+
+        </footer>
+        <script src="../js/airtiger2.js"></script>
+        <script>
+            // 마이페이지 회원정보 수정
+            $('.my_button_ksg').on("click", function(){
+                const id_check = /^[a-zA-Z0-9]{6,15}$/;
+                const pw_check = /^[a-zA-Z0-9\@\!\#]*$/;
+                const name_check = /[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g;
+                const nameen_check = /^[a-zA-Z]*$/;
+                const tel_check = /^01(?:0|1|[6-9])-(?:\d{3}|\d{4})-\d{4}$/;
+                const email_check = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+                let idx = 0;
+            // 비밀번호
+                if( !pw_check.test($(".my_pw_ksg").val()) || $(".my_pw_ksg").val() == "" ){
+                    idx = 1;
+                    $(".my_pw_alert").css("visibility", "visible");
+                    $(".my_pw_ksg").css("border", "1px solid red").val("");
+                }
+            // 비밀번호 재확인
+                if( !pw_check.test($(".my_replay_ksg").val()) || $(".my_replay_ksg").val() == "" ){
+                    idx = 1;
+                    $(".my_pw_alert").css("visibility", "visible");
+                    $(".my_replay_ksg").css("border", "1px solid red").val("");
+                }
+            // 비밀번호 / 비밀번호 재확인 시 일치여부 확인
+                if($(".my_pw_ksg").val() != $(".my_replay_ksg").val()){
+                    idx = 1;
+                    $(".my_pw_alert").css("visibility", "visible");
+                    $(".my_replay_ksg").css("border", "1px solid red").val("");
+                    $(".my_pw_ksg").css("border", "1px solid red").val("");
+                }
+            //영문 국적
+                if( !nameen_check.test($(".my_from_ksg").val()) || $(".my_from_ksg").val() == ""){
+                    idx = 1;
+                    $(".my_from_alert").css("visibility", "visible");
+                    $(".my_from_ksg").css("border", "1px solid red").val("");
+                }
+            // 연락처 확인    
+                if( !tel_check.test($(".my_phone_ksg").val()) || $(".my_phone_ksg").val() == ""){
+                    idx = 1;
+                    $(".my_phone_alert").css("visibility", "visible");
+                    $(".my_phone_ksg").css("border", "1px solid red").val("");
+                }
+            // 이메일 확인
+                if( !email_check.test($(".my_email_ksg").val()) || $(".my_email_ksg").val() == ""){
+                    idx = 1;
+                    $(".my_email_alert").css("visibility", "visible");
+                    $(".my_email_ksg").css("border", "1px solid red").val("");
+                }
+            //생년월일 확인
+                if( $(".my_birth_ksg").val() == "" ){
+                    idx = 1;        
+                    $(".my_birth_alert").css("visibility", "visible");
+                    $(".my_birth_ksg").css("border", "1px solid red");
+                }
+            // 주소 확인
+                if( $(".my_address_ksg").val() == "" ){
+                    idx = 1;        
+                    $(".my_address_alert").css("visibility", "visible");
+                    $(".my_address_ksg").css("border", "1px solid red");
+                }
+            // 최종 확인
+                if( idx == 0 ){
+                    $(".my_form_ksg").submit();
+                }
+            });
+            my_focus =(inclass, nameclass)=>{
+                $("."+inclass).focusin(function(){
+                    $("."+inclass).css("border","1px solid lightgrey");
+                    $("."+nameclass).css("visibility", "hidden");
+                });
+            }
+            my_focus("my_pw_ksg", "my_pw_alert");
+            my_focus("my_replay_ksg", "my_pw_alert");
+            my_focus("my_name_ksg", "my_name_alert");
+            my_focus("my_nameen_ksg", "my_nameen_alert");
+            my_focus("my_birth_ksg", "my_birth_alert");
+            my_focus("my_from_ksg", "my_from_alert");
+            my_focus("my_phone_ksg", "my_phone_alert");
+            my_focus("my_email_ksg", "my_email_alert");
+            my_focus("my_address_ksg", "my_address_alert");
+
+
+            $(".my_pw_button_ksg").on("click", function(){
+                $(".pop_up").css("display", "block");
+            })
+        </script>
+</body>
+</html>

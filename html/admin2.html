@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="../js/jq.js"></script>
+    <link rel="stylesheet" href="../css/main34.css">
+    <title>비행기 티켓팅 사이트</title>
+</head>
+<body>
+        <header>
+            <!--header logo-->
+            <div class="main3_menu">
+                <div class="main_logo">
+                    <div class="main_logo_box">
+                        <img class="main_logo_img" src="../img/main_logo.png" alt="main_logo">
+                    </div>
+                </div>
+                <!--header menu-->
+                <div class="main_menu">
+                    <ul class="main_menu_box">
+                        <li class="menu1">예약하기</li>
+                        <li class="menu2">예약 조회</li>
+                        <li class="menu3">마이 페이지</li>
+                    </ul>
+                </div>
+                <!--header logout-->
+                <div class="main_logout">
+                    <a class="logout_btn" href="#">로그아웃</a>
+                </div>
+            </div>
+        </header>
+        <section>
+                <div class="null_box"></div>
+                <h2 class="ad_text">관리자 모드</h2>
+                <form id="admin_search" class="admin_search" action="./aigoo.php" method="post" name="admin_search">
+                    <input id="admin_id_search" class="admin_id_search" type="text" name="admin_id_search" placeholder=" 아이디 검색">
+                    <input id="admin_id_bt" class="admin_id_bt" type="button" name="admin_id_bt" value="검색">
+                    <p class="admin_alert">* 아이디를 정확하게 입력해주세요.</p>                        
+                </form>
+                <div class="cap_box">
+                <img src="../img/small_logo.png" alt="small">
+                <canvas id="admin_cap" class="cap_pic"></canvas>
+                <div>
+                    <input class="check_num" type="text" id="check_num" maxlength="4" name="cap" required>
+                    <div class="re_box" id="re_box">&#8635;</div>
+                </div>
+                <p>* 캡차가 일치하지 않습니다. 다시 입력해주세요.</p>
+                <input type="button" id="del_box" value="확인">
+            </div>
+                <form id="admin_selectbox_kkw" class="main4_selectbox_kkw" method="post" action="#" name="admin_search">
+                    <div class="wrap">
+                        <li class="find"><h2>예약조회</h2></li>
+                        <div class="booking_while">
+                            <li class="reserve_number"><p>예약번호</p><p>1028181818</p></li>
+                            <li class="start_day"><p>2021-06-17</p><p>출발일</p></li>
+                            <input type="hidden" name="admin_delete" value="">
+                            <article class="main3_selectprice_kkw">
+                                <div>편명</div>
+                                <div>출발시간</div>
+                                <div>소요시간</div>
+                                <div>도착시간</div>
+                                <div>결제금액</div>
+                                <div>취소</div>
+                            </article>
+                            <article class="main3_selectprice2_kkw">
+                                <div><img src="../img/small_logo.png" alt="logo"><p>CDR-C1210</p></div>
+                                <div>13:00<br></div>
+                                <div>02h 30m</div>
+                                <div>15:30<br></div>
+                                <div><br>120,000<br></div>
+                                <input type="button" id="mem_delete_bt" class="admin_delete_bt" value="취소">
+                                <p class="booking_info">탑승자 정보 >></p>
+                            </article>
+                            <div class="passengers">
+                                <div>
+                                    <h4>성인 1</h4>
+                                    <span>김경원</span>
+                                    <span>KIM KYUNG WON</span>
+                                    <span>19960410</span>
+                                    <span>남</span>
+                                    <span>대한민국</span>
+                                </div>
+                                <div>
+                                    <h4>유아 1</h4>
+                                    <span>김경원</span>
+                                    <span>KIM KYUNG WON</span>
+                                    <span>19960410</span>
+                                    <span>남</span>
+                                    <span>대한민국</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>      
+        </section>
+        <div class="pop_up">
+            <img src="../img/small_logo.png" alt="small">
+            <div>가입 완료되었습니다.</div>
+            <a href="./login.php">닫기</a>
+        </div>
+        <footer>
+            <!--footer info-->
+            <div class="footer_info">
+                <h3>(주) 에어타이거</h3>
+                <p>대표 : 김하늘 외 3명 | 주소 : 서울특별시 강서구 하늘길 260 | 전화 : 1234-5678 / 02-1234-5678<br>
+                    사업자등록번호 : 100-12-09134 | 통신판매업신고 : 강서 제 21-0507 | 개인정보보호책임자 : 여객사업본부장 김장연 대표<br>
+                    &copy; AIR TIGER
+                </p>
+            </div>
+        </footer>
+    <script src="../js/airtiger2.js"></script>
+    <script>
+            $("#admin_id_bt").on("click", function(){
+                const id_check = /^[a-zA-Z0-9]{6,15}$/;                
+                if( !id_check.test($("#admin_id_search").val())){
+                    $(".admin_alert").css("visibility", "visible");
+                    $(".admin_id_search").val("").css("border", "1px solid red");
+                } else {
+                    $("#admin_search").submit();
+                }
+            });
+            //관리자 모드 취소 시 캡차 작업
+            display_number =(print_number)=>{
+                const canvas = document.getElementById('admin_cap');
+                const can_re = canvas.getContext("2d");
+                can_re.font = "100px Comic Sans MS";
+                can_re.fillStyle = "#F7F7F9";
+                can_re.textAlign = "center";
+                can_re.clearRect(0, 0, canvas.width, canvas.height);
+                can_re.fillText(print_number, canvas.width / 2, canvas.height / 1.35 );
+            }
+            random_num =()=>{
+                let magic_num = Math.floor(Math.random()*(9999-1000+1))+1000;
+                display_number(magic_num);
+                return magic_num;
+            }
+            let random_number = random_num();
+            $("#re_box").on("click", function(){
+                random_number = random_num();
+            });
+
+            $("#mem_delete_bt").on("click", function(){
+                $(".cap_box").css("display", "block");
+            });
+            $("#del_box").on("click", function(){
+                let number_check = /^[0-9]*$/;
+                if(random_number != $("#check_num").val() || !number_check.test($("#check_num").val())){
+                        $(".cap_box>p").css("visibility", "visible");
+                        $("#check_num").val("").focus().css("border", "1px solid red");
+                } else {
+                    $("#admin_selectbox_kkw").submit();
+                }
+            });
+            $(".cap_box>img").on("click", function(){
+                $(".cap_box").css("display", "none");
+            });
+            $("#admin_id_search").focusin(function(){
+                $("#admin_id_search").val("").css("border", "1px solid lightgrey");
+                $(".admin_alert").css("visibility", "hidden");
+            });
+        </script>        
+</body>
+</html>

@@ -1,0 +1,229 @@
+        *{margin: 0px; padding: 0px; text-decoration: none;}
+        html, body{
+            background-color: lightgray;
+            font-family: 'Nanum Gothic', sans-serif;
+            width : 100%;
+            height : 100%;
+        }
+        $main_color: #ffb300;
+        $sub_color: #13264e;
+.pop_up{
+    width : 300px;
+    height : 200px;
+    border: 1px solid $main_color;
+    background-color: white;
+    text-align: center;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    margin-left : -150px;
+    margin-top : -100px;
+    z-index : 30;
+    display: none;
+    img{
+        width : 50px;
+        height : 50px;
+        float: left;
+        margin-left : 125px;
+    }
+    div{
+        width : 300px;
+        height : 100px;
+        font-size: 13px;
+        text-align: center;
+        color : #333333;
+        background-color: $main_color;
+        line-height: 100px;
+        float: left;
+        font-weight: bold;
+    }
+    #x_box{
+        width : 70px;
+        height : 30px;
+        float: left;
+        background-color: $main_color;
+        color : white;
+        font-size: 13px;
+        text-align: center;
+        line-height: 30px;
+        margin-left : 115px;
+        margin-top : 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        border: none;
+    }
+}        
+
+        .login_back_ksg{
+            width: 570px;
+            height: 100%;
+            margin : 0 auto;
+            box-shadow: 2px 2px 2px 2px gray;
+            background-color: white;
+        }
+        .login_bandbox_ksg{
+            width: 100%;
+            height: 450px; 
+            margin-top: 30%;
+            float: left;
+            img{
+                width: 200px;
+                height : 200px;
+                float: left;
+                margin-left: 185px;
+            }
+            .login_form_ksg{
+                .login_id_ksg{
+                width: 70%;
+                    height: 40px;
+                    border:none;
+                    margin-top: 0%;
+                    margin-left: 88px;
+                    border-radius: 4px;
+                    float: left;
+                    background-color: lightgray;
+                    outline: none;
+                    box-sizing: border-box;
+                    padding-left: 10px;
+                }
+                .login_pw_ksg{
+                    width: 70%;
+                    height: 40px;
+                    border:none;
+                    margin-top: 4%;
+                    margin-left: 88px;
+                    border-radius: 4px;
+                    float: left;
+                    background-color: lightgray;
+                    outline: none;
+                    box-sizing: border-box;
+                    padding-left: 10px;
+                }
+                .login_error_kkw {
+                    width : 100%;
+                    height : 2%;
+                    font-size: 10px;
+                    color : red;
+                    float: left;
+                    box-sizing: border-box;
+                    margin-left : 90px;
+                    visibility: hidden;
+                }
+                .cap_error_kkw {
+                    @extend .login_error_kkw;
+                    visibility: hidden;
+                }                
+                .login_button_ksg{
+                    width: 70%;
+                    height: 40px;
+                    border: none;
+                    border-radius: 4px;
+                    margin-left: 88px;
+                    margin-right: 15%;
+                    margin-top: 1.7%;
+                    background-color: $main_color;
+                    cursor: pointer;
+                }
+                .login_capcha_ksg{
+                    width: 30%;
+                    height: 40px;
+                    margin-top: 2%;
+                    background-color: white;
+                    border-radius: 4px;
+                    margin-left: 88px;
+                    float: left;
+                }
+                .login_capchainput_ksg{
+                    width: 28%;
+                    height: 38px;
+                    background-color: white;
+                    color: $sub_color;
+                    border-radius: 4px;
+                    margin-top: 2%;
+                    border: 1px solid lightgray;
+                    padding-left : 5px;
+                    float: left;
+                    outline: none;
+                }
+                .login_refresh_ksg{
+                    width: 10%;
+                    height: 40px;
+                    border-radius: 4px;
+                    border: none;
+                    margin-top: -40px;
+                    margin-left: 430px;
+                    float: left;
+                    cursor: pointer;
+                    color: white;
+                    background-color: $sub_color;
+                    font-size: 30px;
+                }
+                .login_search_ksg{
+                    width: 94%;
+                    height: 25px;
+                    padding: 3.5%;
+                    margin-bottom: -12px;
+                    .login_searchid_ksg{
+                        width : 100%;
+                        text-align: center;
+                        font-size: 0.7rem;
+                        color: black;
+                        float: left;
+                    }
+                }
+                .login_signup_ksg{
+                    width: 70%;
+                    height: 40px;
+                    border-radius: 4px;
+                    margin-left: 88px;
+                    margin-right: 15%;
+                    background-color: $sub_color;
+                    text-align: center;
+                    line-height : 40px;
+                    font-size : 13px;
+                    color: white;
+                    float: left;
+                }
+            }
+        }
+
+
+.login_fixed_info {
+    width: 30px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 300px;
+    margin-top: -100px;
+    .login_fixed_admin {
+        width: 100%;
+        height: 50%;
+        background-color: $main_color;
+        color: $sub_color;
+        border-radius: 0px 20px 20px 0px;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        line-height: 30px;
+        font-size: 15px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px 2px gray;
+    }
+    .login_fixed_user {
+        width: 100%;
+        height: 50%;
+        background-color: $sub_color;
+        color: white;
+        border-radius: 0px 20px 20px 0px;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        line-height: 30px;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 5px;
+        box-shadow: 2px 2px 2px 2px gray;
+    }
+}

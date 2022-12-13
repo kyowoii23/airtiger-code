@@ -1,0 +1,544 @@
+*{margin: 0px; padding: 0px; list-style: none; text-decoration: none;}
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+$main_color: #ffb300;
+$sub_color: #13264e;
+.pop_up{
+    width : 300px;
+    height : 200px;
+    border: 1px solid $main_color;
+    background-color: white;
+    text-align: center;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    margin-left : -150px;
+    margin-top : -100px;
+    z-index : 30;
+    display: none;
+    img{
+        width : 50px;
+        height : 50px;
+        float: left;
+        margin-left : 125px;
+    }
+    div{
+        width : 300px;
+        height : 100px;
+        font-size: 13px;
+        text-align: center;
+        color : #333333;
+        background-color: $main_color;
+        line-height: 100px;
+        float: left;
+        font-weight: bold;
+    }
+    #x_box{
+        width : 70px;
+        height : 30px;
+        float: left;
+        background-color: $main_color;
+        color : white;
+        font-size: 13px;
+        text-align: center;
+        line-height: 30px;
+        margin-left : 115px;
+        margin-top : 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        border: none;
+    }
+} 
+
+.find_id_back_kkw{
+    width: 570px;
+    height: 100%;
+    margin: auto;
+    // position: absolute;
+    // top: 0px;
+    // left: 35%;
+    box-shadow: 2px 2px 2px 2px gray;
+    background-color: white;
+    .find_id_logo_kkw{
+        width: 100%;
+        height: 200px;
+        float: left;
+        img{
+            @extend .find_id_logo_kkw;
+            width: 200px;
+            margin-left: 200px;
+        }
+    }
+    
+    .find_id_bandbox_kkw{
+        width: 500px;
+        height: 600px;
+        border: 1px solid #757575;
+        margin: 15% 34px 15% 34px;
+        float: left;
+        .tab_menu {
+            width: 100%;
+            height: 50px;
+            border-bottom: 1px solid #757575;
+            li:nth-child(1) {
+                width: 50%;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                background-color: #757575;
+                color: white;
+                float:left;
+                cursor: pointer;
+            }
+            li:nth-child(2) {
+                width: 50%;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                float:left;
+                cursor: pointer;
+            }
+        }
+        .find_id_notice {
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 15px;;
+
+        }
+        
+        .find_id_form_kkw{
+            input::placeholder {
+                font-size: 15px;
+            }
+            .find_id_id_txt_kkw{
+                width: 50px;
+                height: 50px;
+                line-height: 50px;;
+                margin-left: 50px;
+                float: left;
+                font-size: 15px;
+            }
+            .find_id_id_kkw{
+                width: 70%;
+                height: 50px;
+                border:none;
+                margin-top: 0%;
+                margin-left: 2%;
+                border-radius: 4px;
+                float: left;
+                background-color: lightgray;
+                outline: none;
+                box-sizing: border-box;
+                padding-left: 10px;
+            }
+            .find_id_pw_txt_kkw{
+                width: 60px;
+                height: 50px;
+                line-height: 50px;;
+                margin-left: 40px;
+                margin-top: 4%;
+                float: left;
+                font-size: 15px;
+            }
+            .find_id_pw_kkw{
+                width: 70%;
+                height: 50px;
+                border:none;
+                margin-top: 4%;
+                margin-left: 2%;
+                border-radius: 4px;
+                float: left;
+                background-color: lightgray;
+                outline: none;
+                box-sizing: border-box;
+                padding-left: 10px;
+            }
+            #find_id_check {
+                width: 100%;
+                height: 20px;
+                line-height: 20px;
+                float: left;
+                font-size: 10px;
+                margin-left: 110px;
+                color: red;
+            }
+            
+            .find_id_error_kkw {
+                width : 100%;
+                height : 2%;
+                font-size: 13px;
+                text-align: center;
+                color : red;
+                float: left;
+                box-sizing: border-box;
+                padding-left: 70px;
+            }
+            .find_id_button_kkw{
+                width: 150px;
+                height: 40px;
+                border: none;
+                border-radius: 4px;
+                margin-left: 175px;
+                margin-top: 3%;
+                font-size: 15px;
+                background-color: $main_color;
+                cursor: pointer;
+            }
+            
+            .find_id_search_kkw{
+                width: 94%;
+                height: 25px;
+                padding: 3%;
+                .find_id_searchid_kkw{
+                    margin-top: 40px;
+                    margin-left: 205px;
+                    font-size: 0.7rem;
+                    color: black;
+                }
+                .find_id_searchpw_kkw{
+                    float: right;
+                    margin-right: 195px;
+                    font-size: 0.7rem;
+                    margin-top: 5px;
+                    color: black;
+                }
+            }
+            .find_id_result {
+                width: 100%;
+                height: 120px;
+                text-align: center;
+                line-height: 120px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+        .find_id_signup_kkw{
+            width: 200px;
+            height: 40px;
+            border-radius: 4px;
+            margin-left: 150px;
+            text-align: center;
+            line-height : 40px;
+            font-size : 15px;
+            color: #757575;
+            float: left;
+        }
+    }
+
+    .find_pw_bandbox_kkw {
+        width: 500px;
+        height: 650px;
+        border: 1px solid #757575;
+        margin: 15% 34px 15% 34px;
+        float: left;
+        display: none;
+        .tab_menu {
+            width: 100%;
+            height: 50px;
+            border-bottom: 1px solid #757575;
+            li:nth-child(1) {
+                width: 50%;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                float:left;
+                cursor: pointer;
+            }
+            li:nth-child(2) {
+                width: 50%;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                background-color: #757575;
+                color: white;
+                float:left;
+                cursor: pointer;
+            }
+        }
+        .find_id_notice {
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 15px;;
+
+        }
+        
+        .find_id_form_kkw{
+            input::placeholder {
+                font-size: 15px;
+            }
+            .find_id_id_txt_kkw{
+                width: 60px;
+                height: 40px;
+                line-height: 40px;;
+                margin-left: 40px;
+                float: left;
+                font-size: 15px;
+                text-align: center;
+            }
+            .find_id_id_kkw{
+                width: 70%;
+                height: 40px;
+                border:none;
+                margin-top: 0%;
+                margin-left: 2%;
+                border-radius: 4px;
+                float: left;
+                background-color: lightgray;
+                outline: none;
+                box-sizing: border-box;
+                padding-left: 10px;
+            }
+            .find_id_pw_txt_kkw{
+                width: 60px;
+                height: 40px;
+                line-height: 40px;;
+                margin-left: 40px;
+                margin-top: 4%;
+                float: left;
+                font-size: 15px;
+                text-align: center;
+            }
+            .find_id_pw_kkw{
+                width: 70%;
+                height: 40px;
+                border:none;
+                margin-top: 4%;
+                margin-left: 2%;
+                border-radius: 4px;
+                float: left;
+                background-color: lightgray;
+                outline: none;
+                box-sizing: border-box;
+                padding-left: 10px;
+            }
+            .find_pw1_txt_kkw {
+                width: 80px;
+                height: 40px;
+                line-height: 40px;;
+                margin-left: 70px;
+                float: left;
+                font-size: 15px;
+                text-align: center;
+            }
+            .find_pw2_txt_kkw {
+                width: 130px;
+                height: 40px;
+                line-height: 40px;;
+                margin-left: 20px;
+                margin-top: 4%;
+                float: left;
+                font-size: 15px;
+            }
+            .find_pw1_pw_kkw {
+                width: 50%;
+                height: 40px;
+                border:none;
+                margin-top: 0%;
+                margin-left: 2%;
+                border-radius: 4px;
+                float: left;
+                background-color: lightgray;
+                outline: none;
+                box-sizing: border-box;
+                padding-left: 10px;
+            }
+            .find_pw2_pw_kkw {
+                width: 50%;
+                height: 40px;
+                border:none;
+                margin-top: 4%;
+                margin-left: 2%;
+                border-radius: 4px;
+                float: left;
+                background-color: lightgray;
+                outline: none;
+                box-sizing: border-box;
+                padding-left: 10px;
+            }
+            .find_id_error_kkw {
+                width : 100%;
+                height : 2%;
+                font-size: 13px;
+                text-align: center;
+                color : red;
+                float: left;
+                box-sizing: border-box;
+                padding-left: 70px;
+            }
+            #find_pw_check {
+                width: 100%;
+                height: 20px;
+                line-height: 20px;
+                float: left;
+                font-size: 10px;
+                margin-left: 110px;
+                color: red;
+            }
+            .find_id_button_kkw{
+                width: 150px;
+                height: 40px;
+                border: none;
+                border-radius: 4px;
+                margin-left: 175px;
+                margin-top: 3%;
+                font-size: 15px;
+                background-color: $main_color;
+                cursor: pointer;
+            }
+            .find_id_search_kkw{
+                width: 94%;
+                height: 25px;
+                padding: 3%;
+                .find_id_searchid_kkw{
+                    margin-top: 40px;
+                    margin-left: 205px;
+                    font-size: 0.7rem;
+                    color: black;
+                }
+                .find_id_searchpw_kkw{
+                    float: right;
+                    margin-right: 195px;
+                    font-size: 0.7rem;
+                    margin-top: 5px;
+                    color: black;
+                }
+            }
+            .find_id_result {
+                width: 100%;
+                height: 120px;
+                text-align: center;
+                line-height: 120px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+        .find_id_signup_kkw{
+            width: 200px;
+            height: 40px;
+            border-radius: 4px;
+            margin-left: 150px;
+            text-align: center;
+            line-height : 40px;
+            font-size : 15px;
+            color: #757575;
+            float: left;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.find_pw_form_kkw{
+    width: 500px;
+    height: 200px;
+    margin-top: 15px;
+    display: none;
+    input::placeholder {
+        font-size: 15px;
+    }
+    #find_new_pw_check {
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        float: left;
+        font-size: 10px;
+        margin-left: 160px;
+        color: red;
+        visibility: hidden;
+    }
+    #find_new_pw_replay_check {
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        float: left;
+        font-size: 10px;
+        margin-left: 160px;
+        color: red;
+        visibility: hidden;
+    }
+    .find_pw_button_kkw{
+        width: 150px;
+        height: 40px;
+        border: none;
+        border-radius: 4px;
+        margin-left: 175px;
+        margin-top: 1%;
+        font-size: 15px;
+        background-color: $main_color;
+        cursor: pointer;
+    }
+    .find_pw1_txt_kkw {
+        width: 80px;
+        height: 40px;
+        line-height: 40px;;
+        margin-left: 70px;
+        float: left;
+        font-size: 15px;
+        text-align: center;
+    }
+    .find_pw2_txt_kkw {
+        width: 130px;
+        height: 40px;
+        line-height: 40px;;
+        margin-left: 20px;
+        text-align: center;
+        margin-top: 1%;
+        float: left;
+        font-size: 15px;
+    }
+    .find_pw1_pw_kkw {
+        width: 50%;
+        height: 40px;
+        border:none;
+        margin-top: 0%;
+        margin-left: 2%;
+        border-radius: 4px;
+        float: left;
+        background-color: lightgray;
+        outline: none;
+        box-sizing: border-box;
+        padding-left: 10px;
+    }
+    .find_pw2_pw_kkw {
+        width: 50%;
+        height: 40px;
+        border:none;
+        margin-top: 1%;
+        margin-left: 2%;
+        border-radius: 4px;
+        float: left;
+        background-color: lightgray;
+        outline: none;
+        box-sizing: border-box;
+        padding-left: 10px;
+    }
+    .find_id_button_kkw{
+        width: 150px;
+        height: 40px;
+        border: none;
+        border-radius: 4px;
+        margin-left: 175px;
+        margin-top: 5%;
+        font-size: 15px;
+        background-color: $main_color;
+        cursor: pointer;
+    }
+}

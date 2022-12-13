@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jq.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main12.css">
+    <title>비행기 티켓팅 사이트</title>
+</head>
+<body>
+        <header>
+            <!--header logo-->
+            <div class="main1_menu">
+                <div class="main_logo">
+                    <div class="main_logo_box">
+                        <img class="main_logo_img" src="../img/main_logo.png" alt="main_logo">
+                    </div>
+                </div>
+                <!--header menu-->
+                <div class="main_menu">
+                    <ul class="main_menu_box">
+                        <li class="menu1">예약하기</li>
+                        <li class="menu2">예약 조회</li>
+                        <li class="menu3">마이 페이지</li>
+                    </ul>
+                </div>
+                <!--header logout-->
+                <div class="main_logout">
+                    <a class="logout_btn" href="#">로그아웃</a>
+                </div>
+            </div>
+        </header>
+        <section>
+            <article class="main1_slidecut_sky">
+                <div>
+                    <img src="../img/slide1.png" alt="slide_img">
+                </div>
+                <div>
+                    <img src="../img/slide2.png" alt="slide_img">
+                </div>
+                <div>
+                    <img src="../img/slide3.png" alt="slide_img">
+                </div>    
+            </article>
+            <article class="main1_selectbox_sky">
+                <p>편도</p>
+                <form action="#" method="get">
+                    <select name="start_city">
+                        <option value="set" selected>출발지</option>
+                        <option value="icn">서울/인천(ICN)</option>
+                    </select>
+                    <select name="end_city">
+                        <option value="set" selected>도착지</option>
+                        <option value="nrt">도쿄/나리타(NRT)</option>
+                    </select>
+                    <span>성인</span><select name="adult">
+                        <option value="one" selected>1명</option>
+                        <option value="two">2명</option>
+                        <option value="three">3명</option>
+                        <option value="four">4명</option>
+                        <option value="five">5명</option>
+                    </select>
+                    <input type="date" name="start_day" max="2021-06-16" min="2021-06-16" data-placeholder="출발일" required aria-required="true">
+                    <span>유아</span><select name="kids">
+                        <option value="one" selected>1명</option>
+                        <option value="two">2명</option>
+                        <option value="three">3명</option>
+                        <option value="four">4명</option>
+                        <option value="five">5명</option>
+                    </select>
+                    <p class="main1_alert">* 빈칸을 입력해주세요.</p> 
+                    <input type="submit" name="first_sirabe" value="조회">                   
+                </form>
+            </article>
+        </section>
+        <div class="pop_up">
+            <img src="../img/small_logo.png" alt="small">
+            <div>가입 완료되었습니다.</div>
+            <input id="x_box" type="button" value="닫기">
+        </div>        
+        <footer>
+            <!--footer info-->
+            <div class="footer_info">
+                <h3>(주) 에어타이거</h3>
+                <p>대표 : 김하늘 외 3명 | 주소 : 서울특별시 강서구 하늘길 260 | 전화 : 1234-5678 / 02-1234-5678<br>
+                    사업자등록번호 : 100-12-09134 | 통신판매업신고 : 강서 제 21-0507 | 개인정보보호책임자 : 여객사업본부장 김장연 대표<br>
+                    &copy; AIR TIGER
+                </p>
+            </div>
+        </footer>
+        <script src="../js/airtiger2.js"></script>
+    </body>
+</html>

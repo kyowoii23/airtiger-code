@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jq.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>비행기 티켓팅 사이트</title>
+</head>
+<body>
+        <header>
+            <!--header logo-->
+            <div class="admin_page">
+                <div class="main_logo">
+                    <div class="main_logo_box">
+                        <img class="main_logo_img" src="../img/main_logo.png" alt="main_logo">
+                    </div>
+                </div>
+                <!--header menu-->
+                <div class="main_menu">
+                    <ul class="main_menu_box">
+                        <li class="menu1">예약하기</li>
+                        <li class="menu2">예약 조회</li>
+                        <li class="menu3">마이 페이지</li>
+                    </ul>
+                </div>
+                <!--header logout-->
+                <div class="main_logout">
+                    <a class="logout_btn" href="#">로그아웃</a>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="cap_box">
+                <img src="../img/small_logo.png" alt="small">
+                <canvas id="admin_cap" class="cap_pic"></canvas>
+                <div>
+                    <input class="check_num" type="text" id="check_num" maxlength="4" name="cap" required>
+                    <div class="re_box" id="re_box">&#8635;</div>
+                </div>
+                <p>* 캡차가 일치하지 않습니다. 다시 입력해주세요.</p>
+                <input type="button" id="del_box" value="확인">
+            </div>            
+            <div class="null_box"></div>
+            <h2 class="ad_text">관리자 모드</h2>
+            <form class="ad_serarchbox_ksg" action="#" method="post">
+                <input class="ad_search_ksg" type="text" placeholder=" 회원 아이디" name="search_id">
+                <input type="button" class="ad_id_search_button_ksg" value="조회">
+            </form>
+
+            <div class="tabBox1" minwidth="150px">
+                <h2 class="tab_menu">회원 정보 수정</h2>
+                <div class="yellowBar"></div>
+            </div>
+            <div class="tabBox2" minwidth="150px">
+                <h2 class="tab_menu2">예약 조회/취소</h2>
+                <div class="yellowBar2"></div>
+            </div>
+
+            <form class="ad_form_ksg" action="#" method="post">
+                <p class="ad_id_txt_ksg">아이디</p>
+                <span id="ad_id_ksg" class="ad_id_ksg">mmm4mmm</span>
+                <input type="hidden" name="ad_id_ksg" value="아이디 넣어주기">
+                <p class="ad_pw_txt_ksg">임시 비밀번호</p>
+                <input type="text" placeholder=" 비밀번호" class="ad_pw_ksg" value="1234" name="pw">
+                <p class="ad_replay_txt_ksg">임시 비밀번호 재확인</p>
+                <input type="text" placeholder=" 비밀번호 확인" class="ad_replay_ksg" value="1234" name="pw">
+                <p class="ad_alert ad_pw_alert">* 임시 비밀번호를 확인해주세요.</p>                
+                <p class="ad_name_txt_ksg">이름</p>
+                <input type="text" class="ad_name_ksg" value="김하늘" name="name">                
+                <input type="button" class="ad_man_button_ksg" value="남">
+                <input type="button" class="ad_woman_button_ksg" value="여">
+                <input id="admin_sex_check" type="hidden" name="sex" required>
+                <p class="ad_alert ad_name_alert">* 한글 이름 및 성별을 확인해주세요.</p>
+                <p class="ad_nameen_txt_ksg">영문 이름</p>
+                <input type="text" class="ad_nameen_ksg" value="KIMHANEUL" name="nameen">
+                <p class="ad_alert ad_nameen_alert">* 영문 이름을 확인해주세요.</p>                
+                <p class="ad_birth_txt_ksg">생년월일</p>
+                <input type="date" class="ad_birth_ksg" name="birth">
+                <p class="ad_alert ad_birth_alert">* 생년월일을 입력해주세요.</p>    
+                <p class="ad_from_txt_ksg">국적</p>
+                <input type="text" placeholder=" 국적" class="ad_from_ksg" name="from">
+                <p class="ad_alert ad_from_alert">* 영문으로 국적을 입력해주세요.</p>
+                <p class="ad_phone_txt_ksg">연락처</p>
+                <input type="text" placeholder=" 연락처" class="ad_phone_ksg" name="phone">
+                <p class="ad_alert ad_phone_alert">* 연락처를 확인해주세요.</p>
+                <p class="ad_email_txt_ksg">이메일</p>
+                <input type="email" placeholder=" 이메일" class="ad_email_ksg" name="email">
+                <p class="ad_alert ad_email_alert">* 이메일 주소를 확인해주세요.</p>
+                <p class="ad_address_txt_ksg">주소</p>
+                <input type="address" placeholder=" 주소" class="ad_address_ksg" name="address">
+                <p class="ad_alert ad_address_alert">* 주소를 확인해주세요.</p>
+                <input type="button" value="수정" class="ad_button_ksg">
+                <a class="ad_cancle_ksg" href="./main.php">취소</a>
+            </form>
+            <div class="pop_up">
+                <img src="../img/small_logo.png" alt="small">
+                <div>가입 완료되었습니다.</div>
+                <input type="button" id="x_box" value="닫기">
+            </div>
+                <form id="admin_selectbox_kkw" class="main4_selectbox_kkw" method="POST" action="#" name="admin_search">
+                    <div class="wrap">
+                        <li class="reserve_number"><p>예약번호</p><p>1028181818</p></li>
+                        <input type="hidden" name="admin_delete" value="">
+                        <article class="main3_selectprice_kkw">
+                            <div>편명</div>
+                            <div>출발시간</div>
+                            <div>소요시간</div>
+                            <div>도착시간</div>
+                            <div>결제금액</div>
+                            <div>취소</div>
+                        </article>
+                        <article class="main3_selectprice2_kkw">
+                            <div><img src="../img/small_logo.png" alt="logo"><p>CDR-C1210</p></div>
+                            <div>13:00<br></div>
+                            <div>02h 30m</div>
+                            <div>15:30<br></div>
+                            <div><br>120,000<br></div>
+                            <input type="button" id="admin_delete_bt" class="admin_delete_bt" value="취소">
+                        </article>
+                        <div class="passengers">
+                            <div>
+                                <h4>성인 1</h4>
+                                <span>김경원</span>
+                                <span>KIM KYUNG WON</span>
+                                <span>19960410</span>
+                                <span>남</span>
+                                <span>대한민국</span>
+                            </div>
+                            <div>
+                                <h4>유아 1</h4>
+                                <span>김경원</span>
+                                <span>KIM KYUNG WON</span>
+                                <span>19960410</span>
+                                <span>남</span>
+                                <span>대한민국</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+        </section>
+        <footer>
+            <div class="footer_info">
+                <h3>(주) 에어타이거</h3>
+                <p>대표 : 김하늘 외 3명 | 주소 : 서울특별시 강서구 하늘길 260 | 전화 : 1234-5678 / 02-1234-5678<br>
+                    사업자등록번호 : 100-12-09134 | 통신판매업신고 : 강서 제 21-0507 | 개인정보보호책임자 : 여객사업본부장 김장연 대표<br>
+                    &copy; AIR TIGER
+                </p>
+            </div>
+        </footer>
+        <script>
+            //관리자 모드 취소 시 캡차 작업
+            display_number =(print_number)=>{
+                const canvas = document.getElementById('admin_cap');
+                const can_re = canvas.getContext("2d");
+                can_re.font = "100px Comic Sans MS";
+                can_re.fillStyle = "#F7F7F9";
+                can_re.textAlign = "center";
+                can_re.clearRect(0, 0, canvas.width, canvas.height);
+                can_re.fillText(print_number, canvas.width / 2, canvas.height / 1.35 );
+            }
+            random_num =()=>{
+                let magic_num = Math.floor(Math.random()*(9999-1000+1))+1000;
+                display_number(magic_num);
+                return magic_num;
+            }
+            let random_number = random_num();
+            $("#re_box").on("click", function(){
+                random_number = random_num();
+            });
+
+            $("#admin_delete_bt").on("click", function(){
+                $(".cap_box").css("display", "block");
+            });
+            $("#del_box").on("click", function(){
+                let number_check = /^[0-9]*$/;
+                if(random_number != $("#check_num").val() || !number_check.test($("#check_num").val())){
+                        $(".cap_box>p").css("visibility", "visible");
+                        $("#check_num").val("").focus().css("border", "1px solid red");
+                } else {
+                    $("#admin_selectbox_kkw").submit();
+                }
+            });
+            $(".cap_box>img").on("click", function(){
+                $(".cap_box").css("display", "none");
+            });
+        </script>
+        <script src="../js/airtiger2.js"></script>
+</body>
+</html>

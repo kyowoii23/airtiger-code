@@ -1,0 +1,554 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  color: black;
+}
+
+html, body {
+  background-color: lightgray;
+  font-family: 'Nanum Gothic', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.pop_up {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ffb300;
+  background-color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -100px;
+  display: none;
+}
+
+.pop_up img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-left: 125px;
+}
+
+.pop_up div {
+  width: 300px;
+  height: 100px;
+  font-size: 13px;
+  text-align: center;
+  color: #333333;
+  background-color: #ffb300;
+  line-height: 100px;
+  float: left;
+  font-weight: bold;
+}
+
+.pop_up #x_box {
+  width: 70px;
+  height: 30px;
+  float: left;
+  background-color: #ffb300;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 115px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.signup_back_ksg {
+  width: 570px;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-box-shadow: 2px 2px 2px 2px gray;
+          box-shadow: 2px 2px 2px 2px gray;
+  background-color: white;
+}
+
+.signup_back_ksg .signup_logo_ksg {
+  width: 138px;
+  height: 100px;
+  float: left;
+  margin-top: 5%;
+  margin-left: 213px;
+  margin-right: 37.5%;
+  display: block;
+}
+
+.signup_back_ksg .signup_logo_ksg > img {
+  width: 100%;
+}
+
+.signup_back_ksg > h1 {
+  width: 100%;
+  height: 40px;
+  font-size: 30px;
+  color: black;
+  display: block;
+  text-align: center;
+  float: left;
+  margin-top: 30px;
+}
+
+.signup_back_ksg > p {
+  width: 100%;
+  height: 30px;
+  font-size: 10px;
+  color: red;
+  text-align: center;
+  margin-top: 5px;
+  float: left;
+}
+
+.signup_form_ksg {
+  width: 100%;
+  height: 70%;
+}
+
+.signup_form_ksg .signup_id_txt_ksg {
+  width: 11.5%;
+  height: 30px;
+  margin-left: 85px;
+  margin-top: 2%;
+  color: black;
+  text-align: right;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.signup_form_ksg .signup_id_ksg {
+  width: 53%;
+  height: 30px;
+  border: none;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 10%;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 10px;
+  width: 35%;
+  margin-right: 0%;
+}
+
+.signup_form_ksg .signup_id_button_ksg {
+  width: 15%;
+  height: 30px;
+  background-color: #ffb300;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-top: 1%;
+  cursor: pointer;
+  outline: none;
+}
+
+.signup_form_ksg .signup_id_check {
+  width: 60%;
+  height: 2%;
+  font-size: 10px;
+  margin-left: 32%;
+  color: red;
+  visibility: hidden;
+}
+
+.signup_form_ksg .signup_pw_txt_ksg {
+  width: 11.5%;
+  height: 30px;
+  margin-left: 85px;
+  margin-top: 2%;
+  color: black;
+  text-align: right;
+  display: inline-block;
+  font-size: 13px;
+  width: 70px;
+  margin-left: 80px;
+  margin-top: 2%;
+}
+
+.signup_form_ksg .signup_pw_ksg {
+  width: 53%;
+  height: 30px;
+  border: none;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 10%;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 10px;
+  margin-top: 1%;
+}
+
+.signup_form_ksg .signup_pw_check {
+  width: 60%;
+  height: 2%;
+  font-size: 10px;
+  margin-left: 32%;
+  color: red;
+  visibility: hidden;
+}
+
+.signup_form_ksg .signup_replay_txt_ksg {
+  width: 11.5%;
+  height: 30px;
+  margin-left: 85px;
+  margin-top: 2%;
+  color: black;
+  text-align: right;
+  display: inline-block;
+  font-size: 13px;
+  width: 120px;
+  margin-left: 30px;
+}
+
+.signup_form_ksg .signup_replay_ksg {
+  width: 53%;
+  height: 30px;
+  border: none;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 10%;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.signup_form_ksg .signup_replay_check {
+  width: 60%;
+  height: 2%;
+  font-size: 10px;
+  margin-left: 32%;
+  color: red;
+  visibility: hidden;
+}
+
+.signup_form_ksg .signup_name_txt_ksg {
+  width: 11.5%;
+  height: 30px;
+  margin-left: 85px;
+  margin-top: 2%;
+  color: black;
+  text-align: right;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.signup_form_ksg .signup_name_ksg {
+  width: 53%;
+  height: 30px;
+  border: none;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 10%;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 10px;
+  width: 35%;
+  margin-right: 0%;
+}
+
+.signup_form_ksg .signup_name_check {
+  width: 60%;
+  height: 2%;
+  font-size: 10px;
+  margin-left: 32%;
+  color: red;
+  visibility: hidden;
+}
+
+.signup_form_ksg .signup_nameen_txt_ksg {
+  width: 11.5%;
+  height: 30px;
+  margin-left: 85px;
+  margin-top: 2%;
+  color: black;
+  text-align: right;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.signup_form_ksg .signup_nameen_ksg {
+  width: 53%;
+  height: 30px;
+  border: none;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 10%;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 10px;
+  width: 53%;
+  margin-right: 0%;
+}
+
+.signup_form_ksg .signup_nameen_check {
+  width: 60%;
+  height: 2%;
+  font-size: 10px;
+  margin-left: 32%;
+  color: red;
+  visibility: hidden;
+}
+
+.signup_form_ksg .signup_man_button_ksg {
+  width: 15%;
+  height: 30px;
+  background-color: #ffb300;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-top: 1%;
+  cursor: pointer;
+  outline: none;
+  width: 6%;
+  background-color: lightgrey;
+}
+
+.signup_form_ksg .signup_woman_button_ksg {
+  width: 15%;
+  height: 30px;
+  background-color: #ffb300;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-top: 1%;
+  cursor: pointer;
+  outline: none;
+  width: 6%;
+  background-color: lightgrey;
+}
+
+.signup_form_ksg .signup_birth_txt_ksg {
+  width: 11.5%;
+  height: 30px;
+  margin-left: 85px;
+  margin-top: 2%;
+  color: black;
+  text-align: right;
+  display: inline-block;
+  font-size: 13px;
+  width: 70px;
+  margin-left: 80px;
+}
+
+.signup_form_ksg .signup_birth_ksg {
+  width: 53%;
+  height: 30px;
+  border: none;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 10%;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.signup_form_ksg .signup_birth_check {
+  width: 60%;
+  height: 2%;
+  font-size: 10px;
+  margin-left: 32%;
+  color: red;
+  visibility: hidden;
+}
+
+.signup_form_ksg .signup_from_txt_ksg {
+  width: 11.5%;
+  height: 30px;
+  margin-left: 85px;
+  margin-top: 2%;
+  color: black;
+  text-align: right;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.signup_form_ksg .signup_from_ksg {
+  width: 53%;
+  height: 30px;
+  border: none;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 10%;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.signup_form_ksg .signup_from_check {
+  width: 60%;
+  height: 2%;
+  font-size: 10px;
+  margin-left: 32%;
+  color: red;
+  visibility: hidden;
+}
+
+.signup_form_ksg .signup_phone_txt_ksg {
+  width: 11.5%;
+  height: 30px;
+  margin-left: 85px;
+  margin-top: 2%;
+  color: black;
+  text-align: right;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.signup_form_ksg .signup_phone_ksg {
+  width: 53%;
+  height: 30px;
+  border: none;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 10%;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.signup_form_ksg .signup_phone_check {
+  width: 60%;
+  height: 2%;
+  font-size: 10px;
+  margin-left: 32%;
+  color: red;
+  visibility: hidden;
+}
+
+.signup_form_ksg .signup_email_txt_ksg {
+  width: 11.5%;
+  height: 30px;
+  margin-left: 85px;
+  margin-top: 2%;
+  color: black;
+  text-align: right;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.signup_form_ksg .signup_email_ksg {
+  width: 53%;
+  height: 30px;
+  border: none;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 10%;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.signup_form_ksg .signup_email_check {
+  width: 60%;
+  height: 2%;
+  font-size: 10px;
+  margin-left: 32%;
+  color: red;
+  visibility: hidden;
+}
+
+.signup_form_ksg .signup_address_txt_ksg {
+  width: 11.5%;
+  height: 30px;
+  margin-left: 85px;
+  margin-top: 2%;
+  color: black;
+  text-align: right;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.signup_form_ksg .signup_address_ksg {
+  width: 53%;
+  height: 30px;
+  border: none;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 10%;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.signup_form_ksg .signup_address_check {
+  width: 60%;
+  height: 2%;
+  font-size: 10px;
+  margin-left: 32%;
+  color: red;
+  visibility: hidden;
+}
+
+.signup_form_ksg .signup_button_ksg {
+  width: 30%;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 20%;
+  margin-top: 10%;
+  background-color: #ffb300;
+  cursor: pointer;
+  float: left;
+}
+
+.signup_form_ksg .signup_cancle_ksg {
+  width: 30%;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 18%;
+  margin-left: 2%;
+  margin-top: 10%;
+  background-color: #13264e;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  font-size: 13px;
+  float: left;
+}
+/*# sourceMappingURL=signup.css.map */

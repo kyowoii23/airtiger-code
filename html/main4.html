@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="../js/jq.js"></script>
+    <link rel="stylesheet" href="../css/main34.css">
+    <title>비행기 티켓팅 사이트</title>
+</head>
+<body>
+        <header>
+            <!--header logo-->
+            <div class="main3_menu">
+                <div class="main_logo">
+                    <div class="main_logo_box">
+                        <img class="main_logo_img" src="../img/main_logo.png" alt="main_logo">
+                    </div>
+                </div>
+                <!--header menu-->
+                <div class="main_menu">
+                    <ul class="main_menu_box">
+                        <li class="menu1">예약하기</li>
+                        <li class="menu2">예약 조회</li>
+                        <li class="menu3">마이 페이지</li>
+                    </ul>
+                </div>
+                <!--header logout-->
+                <div class="main_logout">
+                    <a class="logout_btn" href="#">로그아웃</a>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="pass_box">
+                <img src="../img/small_logo.png" alt="small">
+                <form action="#" method="post" id="del_pass">
+                    <div>
+                        <span class="text_pass">비밀번호 입력</span>
+                        <input class="check_pass" type="password" id="check_pass" name="pass" required>
+                    </div>
+                <p>* 비밀번호 일치하지 않습니다. 다시 입력해주세요.</p>
+                <input type="button" id="check_box" value="확인">
+                </form>
+            </div>            
+                <div class="null_box"></div>    
+                    <form id="main4_selectbox_kkw" class="main4_selectbox_kkw" method="post" action="#" name="admin_search">
+                        <div class="wrap">
+                            <li class="find"><h2>예약조회</h2></li>
+                            <div class="booking_while">
+                                <li class="reserve_number"><p>예약번호</p><p>1028181818</p></li>
+                                <li class="start_day"><p>2021-06-17</p><p>출발일</p></li>
+                                <input type="hidden" name="admin_delete" value="">
+                                <article class="main3_selectprice_kkw">
+                                    <div>편명</div>
+                                    <div>출발시간</div>
+                                    <div>소요시간</div>
+                                    <div>도착시간</div>
+                                    <div>결제금액</div>
+                                    <div>취소</div>
+                                </article>
+                                <article class="main3_selectprice2_kkw">
+                                    <div><img src="../img/small_logo.png" alt="logo"><p>CDR-C1210</p></div>
+                                    <div>13:00<br></div>
+                                    <div>02h 30m</div>
+                                    <div>15:30<br></div>
+                                    <div><br>120,000<br></div>
+                                    <input type="button" id="mem_delete_bt" class="admin_delete_bt" value="취소">
+                                    <p class="booking_info">탑승자 정보 >></p>
+                                </article>
+                                <div class="passengers">
+                                    <div>
+                                        <h4>성인 1</h4>
+                                        <span>김경원</span>
+                                        <span>KIM KYUNG WON</span>
+                                        <span>19960410</span>
+                                        <span>남</span>
+                                        <span>대한민국</span>
+                                    </div>
+                                    <div>
+                                        <h4>유아 1</h4>
+                                        <span>김경원</span>
+                                        <span>KIM KYUNG WON</span>
+                                        <span>19960410</span>
+                                        <span>남</span>
+                                        <span>대한민국</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>      
+        </section>
+        <div class="pop_up">
+            <img src="../img/small_logo.png" alt="small">
+            <div>가입 완료되었습니다.</div>
+            <a href="./login.php">닫기</a>
+        </div>
+        <footer>
+            <!--footer info-->
+            <div class="footer_info">
+                <h3>(주) 에어타이거</h3>
+                <p>대표 : 김하늘 외 3명 | 주소 : 서울특별시 강서구 하늘길 260 | 전화 : 1234-5678 / 02-1234-5678<br>
+                    사업자등록번호 : 100-12-09134 | 통신판매업신고 : 강서 제 21-0507 | 개인정보보호책임자 : 여객사업본부장 김장연 대표<br>
+                    &copy; AIR TIGER
+                </p>
+            </div>
+        </footer>
+    <script src="../js/airtiger2.js"></script>        
+</body>
+</html>

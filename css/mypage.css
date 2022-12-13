@@ -1,0 +1,764 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.pop_up {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ffb300;
+  background-color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -100px;
+  display: none;
+}
+
+.pop_up img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-left: 125px;
+}
+
+.pop_up div {
+  width: 300px;
+  height: 100px;
+  font-size: 13px;
+  text-align: center;
+  color: #333333;
+  background-color: #ffb300;
+  line-height: 100px;
+  float: left;
+  font-weight: bold;
+}
+
+.pop_up .my_pop_up_cancle {
+  width: 70px;
+  height: 30px;
+  float: left;
+  background-color: #13264e;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 5px;
+  margin-top: 3px;
+  border-radius: 5px;
+  font-weight: bold;
+  float: left;
+  border: none;
+  cursor: pointer;
+}
+
+.pop_up .my_pop_up_pw_txt, .pop_up .my_pop_up_new_txt, .pop_up .my_pop_up_new_replay_txt {
+  width: 80px;
+  height: 20px;
+  color: #333333;
+  text-align: right;
+  line-height: 28px;
+  font-size: 11px;
+  float: left;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.pop_up .my_pop_up_pw, .pop_up .my_pop_up_new, .pop_up .my_pop_up_new_replay {
+  float: left;
+  width: 150px;
+  height: 20px;
+  margin-top: 10px;
+  margin-left: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
+.pop_up .my_pass {
+  width: 300px;
+  height: 10px;
+  font-size: 10px;
+  color: red;
+  float: left;
+  visibility: hidden;
+}
+
+.pop_up .my_pass_second {
+  width: 300px;
+  height: 10px;
+  font-size: 10px;
+  color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: 50px;
+  visibility: hidden;
+}
+
+.pop_up .my_pop_up_btn {
+  width: 70px;
+  height: 30px;
+  float: left;
+  background-color: #ffb300;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 80px;
+  margin-top: 3px;
+  border-radius: 5px;
+  font-weight: bold;
+  float: left;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pop_up input::-webkit-input-placeholder {
+  font-size: 11px;
+}
+
+.pop_up input:-ms-input-placeholder {
+  font-size: 11px;
+}
+
+.pop_up input::-ms-input-placeholder {
+  font-size: 11px;
+}
+
+.pop_up input::placeholder {
+  font-size: 11px;
+}
+
+.pw_pop_up {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ffb300;
+  background-color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -100px;
+}
+
+.pw_pop_up img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-left: 125px;
+}
+
+.pw_pop_up div {
+  width: 300px;
+  height: 100px;
+  font-size: 13px;
+  text-align: center;
+  color: #333333;
+  background-color: #ffb300;
+  line-height: 100px;
+  float: left;
+  font-weight: bold;
+}
+
+.pw_pop_up #pop_box {
+  width: 70px;
+  height: 30px;
+  float: left;
+  background-color: #ffb300;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 115px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  float: left;
+  border: none;
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  max-width: 1200px;
+  height: 100px;
+  margin: 0px auto;
+}
+
+header .main_logo, header .main_menu, header .main_logout {
+  width: 240px;
+  height: 100px;
+  float: left;
+  cursor: pointer;
+}
+
+header .main_logo .main_logo_box, header .main_menu .main_logo_box, header .main_logout .main_logo_box, header .main_logo .main_logo_box .main_logo_img, header .main_menu .main_logo_box .main_logo_img, header .main_logout .main_logo_box .main_logo_img {
+  width: 200px;
+  height: 100px;
+  cursor: pointer;
+}
+
+header .main_menu {
+  width: 70%;
+}
+
+header .main_menu .main_menu_box {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header .main_menu .main_menu_box .menu1, header .main_menu .main_menu_box .menu2, header .main_menu .main_menu_box .menu3 {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  font-size: 17px;
+  margin-top: 35px;
+  line-height: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+header .main_logout {
+  width: 10%;
+}
+
+header .main_logout .logout_btn {
+  width: 120px;
+  height: 50px;
+  color: #757575;
+  float: right;
+  line-height: 50px;
+  text-align: center;
+  font-size: 13px;
+}
+
+section {
+  width: 1200px;
+  height: 520px;
+  margin: 0 auto;
+}
+
+section .null_box {
+  width: 100%;
+  height: 100px;
+  float: left;
+}
+
+section .ad_text {
+  width: 400px;
+  height: 70px;
+  margin-left: 130px;
+  line-height: 70px;
+  float: left;
+}
+
+section .tabBox1 {
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 525px;
+  float: left;
+}
+
+section .tabBox1 .tab_menu {
+  width: 150px;
+  height: 30px;
+  font-size: 20px;
+  color: #333333;
+  float: left;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 0px;
+  line-height: 30px;
+}
+
+section .tabBox1 .yellowBar {
+  width: 140px;
+  height: 5px;
+  background-color: #ffb300;
+  float: left;
+  visibility: visible;
+  margin-left: 4px;
+}
+
+section .my_form_ksg {
+  width: 550px;
+  height: 520px;
+  margin-top: 20px;
+  margin-left: 325px;
+  float: left;
+}
+
+section .my_form_ksg .my_alert {
+  width: 200px;
+  height: 10px;
+  font-size: 10px;
+  color: red;
+  margin-left: 200px;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  line-height: 10px;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+section .my_form_ksg .my_id_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+}
+
+section .my_form_ksg .my_id_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  display: inline-block;
+  border: none;
+  font-weight: bold;
+}
+
+section .my_form_ksg .my_pw_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+}
+
+section .my_form_ksg .my_pw_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+}
+
+section .my_form_ksg .my_replay_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  width: 90px;
+  margin-left: 90px;
+  margin-bottom: 3px;
+}
+
+section .my_form_ksg .my_replay_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+
+section .my_form_ksg .my_pw_button_ksg {
+  width: 15%;
+  height: 30px;
+  background-color: #ffb300;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  cursor: pointer;
+  line-height: 28px;
+  outline: none;
+  width: 70px;
+  margin-bottom: 3px;
+  margin-right: 150px;
+}
+
+section .my_form_ksg .my_name_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  margin-bottom: 13px;
+}
+
+section .my_form_ksg .my_name_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  width: 100px;
+  margin-right: 0%;
+  display: inline-block;
+  border: none;
+  margin-bottom: 3px;
+}
+
+section .my_form_ksg .my_sex_ksg {
+  width: 15%;
+  height: 30px;
+  background-color: #ffb300;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  cursor: pointer;
+  line-height: 28px;
+  outline: none;
+  background-color: white;
+  display: inline-block;
+  text-align: center;
+  width: 70px;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+section .my_form_ksg .my_man_button_ksg {
+  width: 15%;
+  height: 30px;
+  background-color: #ffb300;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  cursor: pointer;
+  line-height: 28px;
+  outline: none;
+  width: 6%;
+  background-color: lightgrey;
+}
+
+section .my_form_ksg .my_woman_button_ksg {
+  width: 15%;
+  height: 30px;
+  background-color: #ffb300;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  cursor: pointer;
+  line-height: 28px;
+  outline: none;
+  background-color: lightgrey;
+}
+
+section .my_form_ksg .my_birth_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+section .my_form_ksg .my_birth_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+
+section .my_form_ksg .my_from_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+section .my_form_ksg .my_from_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+
+section .my_form_ksg .my_nameen_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  margin-bottom: 3px;
+  width: 100px;
+  margin-left: 80px;
+}
+
+section .my_form_ksg .my_nameen_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+
+section .my_form_ksg .my_phone_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+section .my_form_ksg .my_phone_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+
+section .my_form_ksg .my_email_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+section .my_form_ksg .my_email_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+
+section .my_form_ksg .my_address_txt_ksg {
+  width: 50px;
+  height: 30px;
+  margin-left: 130px;
+  margin-bottom: 13px;
+  color: #333333;
+  text-align: right;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+section .my_form_ksg .my_address_ksg {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  line-height: 28px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+  margin-bottom: 3px;
+}
+
+section .my_form_ksg .my_button_ksg {
+  width: 30%;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 20%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  background-color: #ffb300;
+  cursor: pointer;
+  font-size: 13px;
+  float: left;
+}
+
+section .my_form_ksg .my_cancle_ksg {
+  width: 30%;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 2%;
+  margin-top: 5%;
+  background-color: #13264e;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  font-size: 13px;
+  float: left;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: #ffb300;
+  clear: both;
+}
+
+footer .footer_info {
+  width: 1200px;
+  height: 150px;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 20px;
+  padding-top: 40px;
+}
+
+footer .footer_info h3 {
+  width: 1000px;
+  height: 30px;
+  font-size: 13px;
+}
+
+footer .footer_info p {
+  width: 1000px;
+  height: 50px;
+  font-size: 11px;
+}
+
+footer .footer_info p a {
+  width: 50px;
+  height: 13px;
+  font-size: 11px;
+  color: white;
+  background-color: orangered;
+}
+/*# sourceMappingURL=mypage.css.map */

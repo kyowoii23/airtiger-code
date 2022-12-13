@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jq.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main12.css">
+    <title>비행기 티켓팅 사이트</title>
+</head>
+<body>
+        <header>
+            <!--header logo-->
+            <div class="main1_menu">
+                <div class="main_logo">
+                    <div class="main_logo_box">
+                        <img class="main_logo_img" src="../img/main_logo.png" alt="main_logo">
+                    </div>
+                </div>
+                <!--header menu-->
+                <div class="main_menu">
+                    <ul class="main_menu_box">
+                        <li class="menu1">예약하기</li>
+                        <li class="menu2">예약 조회</li>
+                        <li class="menu3">마이 페이지</li>
+                    </ul>
+                </div>
+                <!--header logout-->
+                <div class="main_logout">
+                    <a class="logout_btn" href="#">로그아웃</a>
+                </div>
+            </div>
+        </header>
+        <section class="main2_select_sky">
+                <article class="main2_selectbox_sky">
+                    <div>
+                        <p>편도</p>
+                        <form action="./main2.html" method="post">
+                            <select name="start_city">
+                                <option value="set" selected>출발지</option>
+                                <option value="icn">서울/인천(ICN)</option>
+                            </select>
+                            <input type="date" name="start_day" max="2021-06-17" min="2021-06-17" data-placeholder="출발일" required aria-required="true">
+                            <span>-</span>
+                            <select name="end_city">
+                                <option value="set" selected>도착지</option>
+                                <option value="nrt">도쿄/나리타(NRT)</option>
+                            </select>
+                            <input type="date" name="end_day" max="2021-06-17" min="2021-06-17" data-placeholder="도착일" required aria-required="true">
+                            <span>성인</span><select name="adult">
+                                <option value="one" selected>1명</option>
+                                <option value="two">2명</option>
+                                <option value="three">3명</option>
+                                <option value="four">4명</option>
+                                <option value="five">5명</option>
+                            </select>                    
+                            <span>유아</span><select name="kids">
+                                <option value="one" selected>1명</option>
+                                <option value="two">2명</option>
+                                <option value="three">3명</option>
+                                <option value="four">4명</option>
+                                <option value="five">5명</option>
+                            </select> 
+                            <input type="submit" name="submit" value="변경">                   
+                        </form>
+                    </div>
+                </article>
+                <article class="main2_selectbox2_sky">
+                    <div></div>
+                    <h1><img class="air_img" src="../img/air.png" alt="air_img">&nbsp;여정 : 서울/인천(ICN) <img class="arr_img" src="../img/arr.png" alt="arr_img"> 도쿄/나리타(NRT)</h1>
+                    <div class="main2_price_sky">
+                        <p>2021-06-17 (목)</p>
+                        <span>KRW</span><p class="main2_pricepay_sky">120,000</p>
+                    </div>
+                </article>
+                <article class="main2_selectprice_sky">
+                    <div>편명</div>
+                    <div>출발시간</div>
+                    <div>소요시간</div>
+                    <div>도착시간</div>
+                    <div>운임</div>
+                </article>
+                <article class="main2_selectprice2_sky">
+                    <div>CDR-C1210</div>
+                    <div>13:00<br></div>
+                    <div>02h 30m</div>
+                    <div>15:30<br></div>
+                    <div><br>120,000<br><p>잔여 250석!</p></div>
+                </article>
+        </section>
+        <section class="main2_bottom_sky">
+            <form action="#" method="post">
+                <input id="main2_startcity_sky" type="hidden" name="startcity">
+                <input id="main2_endcity_sky" type="hidden" name="endcity">
+                <input id="main2_startday_sky" type="hidden" name="startday">
+                <input id="main2_starttime_sky" type="hidden" name="startime">
+                <input id="main2_endtime_sky" type="hidden" name="endtime">
+                <input id="main2_endday_sky" type="hidden" name="endday">
+                <input id="main2_airline_sky" type="hidden" name="airline">
+                <input id="main2_price_sky" type="hidden" name="price">
+                <input id="main2_adult_sky" type="hidden" name="adult">
+                <input id="main2_kids_sky" type="hidden" name="kids">
+                <p>항공 운임 총액</p>
+                <div>120,000</div>
+                <input id="main2_submitbt_sky" type="submit" name="submit" value="다음">
+            </form>
+        </section>
+        <div class="pop_up">
+            <img src="../img/small_logo.png" alt="small">
+            <div>가입 완료되었습니다.</div>
+            <a href="./login.php">닫기</a>
+        </div>        
+        <footer>
+            <!--footer info-->
+            <div class="footer_info">
+                <h3>(주) 에어타이거</h3>
+                <p>대표 : 김하늘 외 3명 | 주소 : 서울특별시 강서구 하늘길 260 | 전화 : 1234-5678 / 02-1234-5678<br>
+                    사업자등록번호 : 100-12-09134 | 통신판매업신고 : 강서 제 21-0507 | 개인정보보호책임자 : 여객사업본부장 김장연 대표<br>
+                    &copy; AIR TIGER
+                </p>
+            </div>
+        </footer>
+        <script src="../js/airtiger2.js"></script>
+</body>
+</html>

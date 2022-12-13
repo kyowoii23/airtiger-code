@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/login.css">
+        <script src="../js/jq.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <title>AirTiger logoin</title>
+    </head>
+    
+    <body>
+            <!--로그인창 배경화면-->
+            <div id="login_back_ksg" class="login_back_ksg" minwidth="570px">
+                <div class="login_bandbox_ksg"> <!--인풋 박스 묶어주는 박스-->
+                    <img src="./img/logo_txt_bottom.png" alt="로고 이미지">
+                    <form class="login_form_ksg" action="login.php" method="post">
+                        <input type="text" placeholder=" 아이디" class="login_id_ksg" name="id">
+                        <input type="password" placeholder=" 비밀번호" class="login_pw_ksg" name="pw">
+                        <canvas id="login_capcha_ksg" class="login_capcha_ksg"></canvas>
+                        <input type="text" class="login_capchainput_ksg">
+                        <button id="login_refresh_ksg" class="login_refresh_ksg">&#8635;</button>
+                        <p id="login_error_kkw" class='login_error_kkw'></p>
+                        <input type="submit" class="login_button_ksg" value="로그인">
+                        <div class="login_search_ksg">
+                            <a class="login_searchid_ksg" href="./find_id.php?id='find_id'">아이디/비밀번호 찾기</a>
+                        </div>
+                        <a href="./signup.php" class="login_signup_ksg">회원가입</a>
+                    </form>
+                </div>
+            </div>
+        <script>
+         displayNumber = (printNumber) => {
+        const stLogCc = document.getElementById("login_capcha_ksg");
+        const ctx = stLogCc.getContext("2d");
+        
+        ctx.font = "100px D2Coding";
+        ctx.fillStyle = "#13264e";
+        ctx.textAlign = "center";
+        ctx.clearRect(0,0,stLogCc.width, stLogCc.height); // 값이 초기화 되는 상자
+        ctx.fillText(printNumber, stLogCc.width/2, stLogCc.height/1.3);
+        }
+
+        generateRandomNumber = () => {
+            const magicNumber = Math.floor(Math.random()*(9999-1000+1))+1000; // 랜덤숫자
+            displayNumber(magicNumber);
+            return magicNumber;
+        }
+
+        /*메인 함수*/
+        (main = () => {
+                let randomNumber = generateRandomNumber(); 
+            }) ();
+                //Event Area
+                //Event Random
+            $("#login_refresh_ksg").on("click", function() { // 새로고침
+                generateRandomNumber();
+                //End Random
+                //Event ID KeyuP
+        });
+
+        </script>
+</body>
+</html>

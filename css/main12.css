@@ -1,0 +1,577 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.pop_up {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #FFB300;
+  background-color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -100px;
+  z-index: 30;
+}
+
+.pop_up img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-left: 125px;
+}
+
+.pop_up div {
+  width: 300px;
+  height: 100px;
+  font-size: 13px;
+  text-align: center;
+  color: #333333;
+  background-color: #FFB300;
+  line-height: 100px;
+  float: left;
+  font-weight: bold;
+}
+
+.pop_up #x_box {
+  width: 70px;
+  height: 30px;
+  float: left;
+  background-color: #FFB300;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 115px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  z-index: 30;
+  background-color: white;
+}
+
+header .main1_menu {
+  width: 1200px;
+  height: 100px;
+  margin: auto;
+}
+
+header .main1_menu .main_logo, header .main1_menu .main_menu, header .main1_menu .main_logout {
+  width: 240px;
+  height: 100px;
+  float: left;
+  cursor: pointer;
+}
+
+header .main1_menu .main_logo .main_logo_box, header .main1_menu .main_menu .main_logo_box, header .main1_menu .main_logout .main_logo_box, header .main1_menu .main_logo .main_logo_box .main_logo_img, header .main1_menu .main_menu .main_logo_box .main_logo_img, header .main1_menu .main_logout .main_logo_box .main_logo_img {
+  width: 200px;
+  height: 100px;
+  cursor: pointer;
+}
+
+header .main1_menu .main_logo .main_logo_box .main_logo_img, header .main1_menu .main_menu .main_logo_box .main_logo_img, header .main1_menu .main_logout .main_logo_box .main_logo_img {
+  cursor: pointer;
+}
+
+header .main1_menu .main_menu {
+  width: 70%;
+}
+
+header .main1_menu .main_menu .main_menu_box {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header .main1_menu .main_menu .main_menu_box .menu1, header .main1_menu .main_menu .main_menu_box .menu2, header .main1_menu .main_menu .main_menu_box .menu3 {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  font-size: 17px;
+  margin-top: 35px;
+  line-height: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+header .main1_menu .main_logout {
+  width: 10%;
+}
+
+header .main1_menu .main_logout .logout_btn {
+  width: 120px;
+  height: 50px;
+  color: #757575;
+  float: right;
+  line-height: 50px;
+  font-size: 13px;
+  text-align: center;
+}
+
+section {
+  width: 100%;
+  height: 780px;
+}
+
+section .main1_slidecut_sky {
+  width: 100%;
+  height: 500px;
+}
+
+section .main1_slidecut_sky div {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  top: 100px;
+  float: left;
+}
+
+section .main1_slidecut_sky div img {
+  width: 100%;
+  height: 400px;
+  float: left;
+}
+
+section .main1_slidecut_sky div:nth-child(1) {
+  z-index: 10;
+}
+
+section .main1_slidecut_sky div:nth-child(2) {
+  z-index: 7;
+  display: none;
+}
+
+section .main1_slidecut_sky div:nth-child(3) {
+  z-index: 5;
+  display: none;
+}
+
+section .main1_selectbox_sky {
+  width: 1200px;
+  margin: auto;
+  font-size: 13px;
+}
+
+section .main1_selectbox_sky p {
+  width: 402px;
+  height: 30px;
+  background-color: #FFB300;
+  font-weight: bold;
+  margin: 10px auto 0px auto;
+  line-height: 30px;
+  padding-left: 20px;
+  color: #333333;
+  font-size: 15px;
+}
+
+section .main1_selectbox_sky form {
+  width: 400px;
+  height: 170px;
+  margin: 0px auto 10px auto;
+  border: 1px solid #FFB300;
+  padding: 10px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+section .main1_selectbox_sky form select[name="start_city"], section .main1_selectbox_sky form select[name="end_city"], section .main1_selectbox_sky form input[name="start_day"] {
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #FFB300;
+  color: #333333;
+  margin: 5px;
+  font-size: 13px;
+  outline: none;
+}
+
+section .main1_selectbox_sky form select[name="end_city"] {
+  margin: 5px 13px 5px 0px;
+}
+
+section .main1_selectbox_sky form input[name="start_day"] {
+  width: 263px;
+  padding-left: 5px;
+  margin-right: 11.5px;
+}
+
+section .main1_selectbox_sky form span {
+  width: 35px;
+  margin: 5px 5px 5px 0px;
+  font-weight: bold;
+}
+
+section .main1_selectbox_sky form select[name="adult"], section .main1_selectbox_sky form select[name="kids"] {
+  width: 70px;
+  height: 40px;
+  margin: 0px 5px 0px 5px;
+  border-radius: 5px;
+  border: 1px solid #FFB300;
+  color: #333333;
+  outline: none;
+  font-size: 13px;
+}
+
+section .main1_selectbox_sky form .main1_alert {
+  width: 380px;
+  height: 10px;
+  font-size: 10px;
+  color: red;
+  background-color: white;
+  margin: auto;
+  visibility: hidden;
+}
+
+section .main1_selectbox_sky form input[name="first_sirabe"] {
+  width: 100px;
+  height: 30px;
+  background-color: #FFB300;
+  color: #333333;
+  outline: none;
+  border: none;
+  margin: 20px 150px;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.main2_select_sky {
+  width: 100%;
+  height: 730px;
+}
+
+.main2_select_sky .main2_selectbox_sky {
+  width: 1200px;
+  height: 50px;
+  background-color: #FFB300;
+  left: 50%;
+  top: 100px;
+  margin-left: -600px;
+  position: fixed;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.main2_select_sky .main2_selectbox_sky div {
+  width: 1000px;
+  margin: auto;
+}
+
+.main2_select_sky .main2_selectbox_sky div p {
+  width: 70px;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+}
+
+.main2_select_sky .main2_selectbox_sky div select[name="start_city"], .main2_select_sky .main2_selectbox_sky div select[name="end_city"], .main2_select_sky .main2_selectbox_sky div input[name="start_day"], .main2_select_sky .main2_selectbox_sky div input[name="end_day"] {
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #FFB300;
+  color: #333333;
+  margin: 5px;
+  font-size: 13px;
+  outline: none;
+}
+
+.main2_select_sky .main2_selectbox_sky div select[name="end_city"], .main2_select_sky .main2_selectbox_sky div input[name="end_day"] {
+  margin: 5px 13px 5px 0px;
+}
+
+.main2_select_sky .main2_selectbox_sky div input[name="start_day"], .main2_select_sky .main2_selectbox_sky div input[name="end_day"] {
+  width: 130px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+}
+
+.main2_select_sky .main2_selectbox_sky div span {
+  width: 35px;
+  margin: 5px 5px 5px 0px;
+  font-weight: bold;
+}
+
+.main2_select_sky .main2_selectbox_sky div select[name="adult"], .main2_select_sky .main2_selectbox_sky div select[name="kids"] {
+  width: 70px;
+  height: 40px;
+  margin: 0px 5px 0px 5px;
+  border-radius: 5px;
+  border: 1px solid #FFB300;
+  color: #333333;
+  outline: none;
+  font-size: 13px;
+}
+
+.main2_select_sky .main2_selectbox_sky div input[name="first_sirabe"] {
+  width: 70px;
+  height: 40px;
+  background-color: orangered;
+  color: #333333;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.main2_select_sky .main2_selectbox2_sky {
+  width: 1000px;
+  margin: auto;
+}
+
+.main2_select_sky .main2_selectbox2_sky div {
+  width: 1000px;
+  height: 170px;
+}
+
+.main2_select_sky .main2_selectbox2_sky h1 {
+  width: 1000px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.main2_select_sky .main2_selectbox2_sky h1 .air_img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-top: 8px;
+  float: left;
+}
+
+.main2_select_sky .main2_selectbox2_sky .main2_price_sky {
+  width: 200px;
+  height: 80px;
+  border: 1px solid #757575;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.main2_select_sky .main2_selectbox2_sky .main2_price_sky p {
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #757575;
+}
+
+.main2_select_sky .main2_selectbox2_sky .main2_price_sky span {
+  width: 50px;
+  height: 50px;
+  line-height: 60px;
+  float: left;
+  text-align: right;
+  margin: 0px 5px 0px 10px;
+  color: #757575;
+}
+
+.main2_select_sky .main2_selectbox2_sky .main2_price_sky .main2_pricepay_sky {
+  width: 135px;
+  height: 50px;
+  font-size: 30px;
+  float: left;
+  font-weight: bold;
+  text-align: left;
+  line-height: 50px;
+  color: #333333;
+}
+
+.main2_select_sky .main2_selectprice_sky {
+  width: 1000px;
+  height: 30px;
+  margin: 20px auto 0px auto;
+  border-top: 1px solid #333333;
+}
+
+.main2_select_sky .main2_selectprice_sky div {
+  width: 200px;
+  height: 30px;
+  background-color: #f7f7f7;
+  float: left;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333333;
+  line-height: 30px;
+}
+
+.main2_select_sky .main2_selectprice2_sky {
+  width: 1000px;
+  height: 150px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.main2_select_sky .main2_selectprice2_sky div {
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  float: left;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333333;
+  line-height: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid #333333;
+}
+
+.main2_select_sky .main2_selectprice2_sky div:nth-child(1) {
+  line-height: 100px;
+  font-size: 25px;
+}
+
+.main2_select_sky .main2_selectprice2_sky div:nth-child(2) {
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+.main2_select_sky .main2_selectprice2_sky div:nth-child(2)::after {
+  content: "(ICN)";
+  font-size: 13px;
+}
+
+.main2_select_sky .main2_selectprice2_sky div:nth-child(3) {
+  line-height: 100px;
+  font-size: 15px;
+  color: #757575;
+  font-weight: normal;
+}
+
+.main2_select_sky .main2_selectprice2_sky div:nth-child(4) {
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+.main2_select_sky .main2_selectprice2_sky div:nth-child(4)::after {
+  content: "(NRT)";
+  font-size: 13px;
+}
+
+.main2_select_sky .main2_selectprice2_sky div:nth-child(5) {
+  font-size: 20px;
+}
+
+.main2_select_sky .main2_selectprice2_sky div:nth-child(5) p {
+  font-size: 13px;
+  color: orangered;
+}
+
+.main2_select_sky .main2_selectprice2_sky div:nth-child(5)::before {
+  content: "KRW";
+  font-size: 13px;
+  color: #757575;
+  font-weight: normal;
+}
+
+.main2_bottom_sky {
+  width: 1200px;
+  height: 50px;
+  margin: auto;
+  background-color: white;
+  text-align: center;
+}
+
+.main2_bottom_sky form {
+  width: 400px;
+  height: 50px;
+  margin: auto;
+}
+
+.main2_bottom_sky form p {
+  width: 120px;
+  height: 50px;
+  color: orangered;
+  float: left;
+  line-height: 50px;
+}
+
+.main2_bottom_sky form div {
+  width: 180px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 50px;
+  float: left;
+}
+
+.main2_bottom_sky form #main2_submitbt_sky {
+  width: 70px;
+  height: 30px;
+  background-color: orangered;
+  margin: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type="date"]::before {
+  content: attr(data-placeholder);
+  width: 100%;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+  display: none;
+}
+
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: #FFB300;
+}
+
+footer .footer_info {
+  width: 1200px;
+  height: 150px;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 20px;
+  padding-top: 40px;
+}
+
+footer .footer_info h3 {
+  width: 1000px;
+  height: 30px;
+  font-size: 13px;
+}
+
+footer .footer_info p {
+  width: 1000px;
+  height: 50px;
+  font-size: 11px;
+}
+
+footer .footer_info p a {
+  width: 50px;
+  height: 13px;
+  font-size: 11px;
+  color: white;
+  background-color: orangered;
+}
+/*# sourceMappingURL=main12.css.map */

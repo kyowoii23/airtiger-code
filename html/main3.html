@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jq.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="../css/main34.css">
+    <title>비행기 티켓팅 사이트</title>
+</head>
+<body>
+        <header>
+            <!--header logo-->
+            <div class="main3_menu">
+                <div class="main_logo">
+                    <div class="main_logo_box">
+                        <img class="main_logo_img" src="../img/main_logo.png" alt="main_logo">
+                    </div>
+                </div>
+                <!--header menu-->
+                <div class="main_menu">
+                    <ul class="main_menu_box">
+                        <li class="menu1">예약하기</li>
+                        <li class="menu2">예약 조회</li>
+                        <li class="menu3">마이 페이지</li>
+                    </ul>
+                </div>
+                <!--header logout-->
+                <div class="main_logout">
+                    <a class="logout_btn" href="#">로그아웃</a>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <article class="main3_selectbox_kkw">
+                <div>
+                    <p>편도</p>
+                    <form action="" method="post">
+                        <select name="start_city">
+                            <option value="set" selected>출발지</option>
+                            <option value="icn">서울/인천(ICN)</option>
+                        </select>
+                        <input type="date" name="start_day" max="2021-06-17" min="2021-06-17" data-placeholder="출발일" required aria-required="true">
+                        <span>-</span>
+                        <select name="end_city">
+                            <option value="set" selected>도착지</option>
+                            <option value="nrt">도쿄/나리타(NRT)</option>
+                        </select>
+                        <input type="date" name="end_day" max="2021-06-17" min="2021-06-17" data-placeholder="도착일" required aria-required="true">
+                        <span>성인</span><select name="adult">
+                            <option value="one" selected>1명</option>
+                            <option value="two">2명</option>
+                            <option value="three">3명</option>
+                            <option value="four">4명</option>
+                            <option value="five">5명</option>
+                        </select>                    
+                        <span>유아</span><select name="kids">
+                            <option value="one" selected>1명</option>
+                            <option value="two">2명</option>
+                            <option value="three">3명</option>
+                            <option value="four">4명</option>
+                            <option value="five">5명</option>
+                        </select> 
+                        <input type="submit" name="submit" value="변경">                   
+                    </form>
+                </div>
+            </article>
+
+            <article class="main3_selectbox2_kkw">
+                <form action="#" method="post">
+
+                    <div class="empty_box"></div>
+                        <div class="board_info">
+                            <h2>탑승객 정보</h2>
+                            <div class="info_box">
+                                <div>
+                                    <h3>성인1</h3>
+                                    <span>이름</span><input type="text" name="passenger_name" placeholder="이름" required>
+                                    <span>생년월일</span><input type="text" name="passenger_birthday" placeholder="생년월일" required>
+                                    <span>성별</span><select name="passenger_gender">
+                                        <option value="man">남</option>
+                                        <option value="woman">여</option>
+                                    </select>
+                                    <span>국적</span><select name="passenger_national">
+                                        <option value="korea">대한민국</option>
+                                        <option value="japan">일본</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <h3>유아1</h3>
+                                    <span>이름</span><input type="text" name="passenger_name" placeholder="이름" required>
+                                    <span>생년월일</span><input type="text" name="passenger_birthday" placeholder="생년월일" required>
+                                    <span>성별</span><select name="passenger_gender">
+                                        <option value="man">남</option>
+                                        <option value="woman">여</option>
+                                    </select>
+                                    <span>국적</span><select name="passenger_national">
+                                        <option value="korea">대한민국</option>
+                                        <option value="japan">일본</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <p>- 이름 및 성별을 제외한 생년월일, 국적 등 정보는 마이페이지에서 수정 가능합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reservation_info">
+                            <h2>예매자 정보</h2>
+                            <div class="info_box">
+                                <div>
+                                    <span>이메일</span><input type="text" name="leader_email" placeholder="e-mail">
+                                    <span>연락처</span><input type="text" name="leader_phone" placeholder="연락처">
+                                </div>
+                                <div>
+                                    <p>- 항공기 운항정보(스케줄 변경, 결항 등) 및 구매정보가 알림톡 또는 SMS 로 발송되며, 이메일로 e-티켓이 발송됩니다.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main3_bottom_kkw">
+                            <div>
+                                <p>항공 운임 총액</p>
+                                <div>120,000</div>
+                                <input id="main3_submitbt_kkw" type="submit" name="submit" value="결제">
+                            </div>
+                        </div>
+
+                </form>
+                
+            </article>
+            
+        </section>
+
+        <div class="pop_up">
+            <img src="../img/small_logo.png" alt="small">
+            <div>가입 완료되었습니다.</div>
+            <a href="./login.php">닫기</a>
+        </div>        
+
+
+        <footer>
+            <!--footer info-->
+            <div class="footer_info">
+                <h3>(주) 에어타이거</h3>
+                <p>대표 : 김하늘 외 3명 | 주소 : 서울특별시 강서구 하늘길 260 | 전화 : 1234-5678 / 02-1234-5678<br>
+                    사업자등록번호 : 100-12-09134 | 통신판매업신고 : 강서 제 21-0507 | 개인정보보호책임자 : 여객사업본부장 김장연 대표<br>
+                    &copy; AIR TIGER
+                </p>
+            </div>
+
+        </footer>
+    <script src="../js/airtiger2.js"></script>    
+</body>
+</html>
